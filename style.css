@@ -81,14 +81,15 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding: 5px;
-    background-color: #45a1ff;
-    color: #fff;
+    background-color: white;
+    color: black;
     width: 100%;
     height: 20%;
 }
 
 .nav-footer {
     width: 100%;
+    height: 260px;
     padding: 0px;
 }
 
@@ -107,7 +108,7 @@ footer {
 /* Partie logo du footer en CSS */
 
 .footer-logo {
-    flex-grow: 1;
+    flex-grow: 0.5;
 }
 
 /* Fin de la partie map en CSS */
@@ -115,16 +116,19 @@ footer {
 /* Partie map du footer en CSS */
 
 .footer-map {
-    flex-grow: 2
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    flex-grow: 3;
 }
 
-#temp {
-    object-fit: cover;
-    /* object-position: 100% 90%; */
-
-    width: 800px;
+#footer-map-div {
+    border: 1px solid black;
+    width: 100%;
     height: 100px;
 }
+
 
 /* Fin de la partie map en CSS */
 
@@ -132,7 +136,8 @@ footer {
 
 .footer-contact-2 {
     display: flex;
-    flex-grow: 0,5;
+    justify-content: flex-end;
+    flex-grow: 0.5;
 }
 
 
@@ -143,6 +148,7 @@ footer {
     justify-content: flex-end;
     margin-top: 8px;
     margin-bottom: 8px;
+    padding-left: 0px;
 }
 
 .footer-list {
@@ -165,8 +171,8 @@ footer {
 #footer-link {
     text-decoration: none;
     font-size: 2em;
-    background-color: #45a1ff;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 0px;
     max-width: 25%;
     margin: 0 auto;
@@ -177,6 +183,9 @@ footer {
 }
 /* Fin de la partie contact en CSS */
 /* Fin de la partie footer des pages en CSS */
+
+
+/* Partie responsive du code CSS */
 
 /* Adapatation du design sur écran inférieur à 838 px */
 
@@ -276,8 +285,9 @@ h3 {
     line-height: 200%;
 }
 
-iframe {
+#main-video {
     margin-left: 800px;
     margin-top : -200px;
 }
   
+/* Fin partie responsive du code CSS */
