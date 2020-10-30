@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Deux Tours</title>
+    <link href="css/style_chambres.css" rel="stylesheet" type="text/css"/>
+</head>
+   <body>
+       <section>
+        <ul class="ul_card">
+	
+            <li class="li_card">
+                <a class="chambre_card_image" href=""  style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/227935231.jpg?k=7ff870710ecefdccf69cbf392ea5bd488516fc3f665920ebf0f780568ae4fd15&o=);">    
+                </a>
+                <a class="chambre_card_description" href="">
+                    <h2>Hortense</h2>
+                    <p>La lumineuse</p>
+                </a>
+                <button  id="bouton_card" onclick="javascript:afficher_card('modal_description');">Voir la description</button>
+            </li>
+            
+            <li class="li_card">
+                <a class="chambre_card_image" href="" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/174791537.jpg?k=cc8581ad3df512360449c4f057abcf28d5825f0f1f5e27c9348513d13328cca6&o=);">
+                </a>
+                <a class="chambre_card_description" href="">
+                    <h2>Héloise</h2>
+                    <p>La charmante</p>
+                </a>
+                <button  id="bouton_card" onclick="javascript:afficher_card('modal_description');">Voir la description</button>
+            </li>
+            
+            <li class="li_card">
+                <a class="chambre_card_image" href="" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/59592294.jpg?k=2ac0cb33864a0bc9dea9d9ffdc29e9d64a27d38ff3305693f0e5f73de3723d93&o=);">
+                </a>
+                <a class="chambre_card_description" href="">
+                    <h2>Joséphine</h2>
+                    <p>La chaleureuse</p>
+                </a>
+                <button  id="bouton_card" onclick="javascript:afficher_card('modal_description');">Voir la description</button>
+            </li>
+                       
+        </ul>
+       </section>
+
+
+        <!-- Modal -->
+      
+       <div id="modal_description" class="modal_description">
+           <div class="modal_card"> 
+               <div class="modal_card_content">
+                   <h2>Joséphine</h2>
+                   <div class="modal_card_caracteristiques">
+                       <h3>Caractéristiques</h3>
+
+                   </div>
+                   <div class="modal_card_prix">
+                       <h3>Prix</h3>
+                    </div>
+                </div>
+
+                <div class="modal_card_image">
+                    <img src="Images/Joséphine_1.jpg" alt="">
+                    <img src="Images/Joséphine_2.jpg" alt="">
+                    <img src="Images/Joséphine_3.jpg" alt="">
+                </div>
+
+            </div>
+       </div>
+
+
+
+       <script type="text/javascript">
+
+    function afficher_card(id)
+
+{
+if(document.getElementById(id).style.visibility=="hidden")
+{
+document.getElementById(id).style.visibility="visible";
+}
+else
+{
+document.getElementById(id).style.visibility="hidden";
+
+}
+return true;
+}
+        </script>
+
+</body>
+</html>
