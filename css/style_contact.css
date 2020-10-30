@@ -1,3 +1,8 @@
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+=======
 #p0{
     text-align: center;
     font-size: 2.5em;
@@ -33,6 +38,8 @@ input[type=text], select, textarea, #email, #téléphone {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
   
+  /* Style the submit button with a specific background color etc */
+
   /* Style du bouton "envoyer" */
   input[type=submit] {
     background-color: #a07556;
@@ -74,6 +81,9 @@ input[type=text], select, textarea, #email, #téléphone {
   #message{
       font-family: Arial;
   }
+
+  #submit{
+      align-content: center;
 
   .error{
     color: #D8000C;
