@@ -24,32 +24,66 @@
     <main>
          <!-- Image de fond + Description -->
         <section class="background"></section>
-        <section class="Content-accueil">
-            <div class="div_accueil">
-                <p class = "p_accueil_description">Venez découvrir les DeuxTours situées dans le Gard entre Cévennes et Camargue, à deux pas de villes anciennes telles qu’Uzès, Nîmes, Anduze, Lussan. Aurélie et Vincent vous accueillent dans leur demeure du XVIIIème siècle. L’architecture des lieux allie charme et authenticité, avec ses balustres et sculptures en pierre. Passionnés d’histoire et d’architecture, nous pourrons vous faire découvrir la taille de pierre réalisée sur place par votre hôte. </p>
-                <button class="button-accueil-chambres">Nos chambres</button>
-            </div>
-             <!-- Insertion d'une vidéo -->
-            <div>
-                <iframe id="main-video" width="560" height="315" src="https://www.youtube.com/embed/CJn3PTWBWuU"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
+        <div class="">
+            <section class="content_accueil">
+                <div class="div_accueil">
+                    <p class = "p_accueil_description">Venez découvrir les DeuxTours situées dans le Gard entre Cévennes et Camargue, à deux pas de villes anciennes telles qu’Uzès, Nîmes, Anduze, Lussan. Aurélie et Vincent vous accueillent dans leur demeure du XVIIIème siècle. L’architecture des lieux allie charme et authenticité, avec ses balustres et sculptures en pierre. Passionnés d’histoire et d’architecture, nous pourrons vous faire découvrir la taille de pierre réalisée sur place par votre hôte. </p>
+                    <button class="button_accueil_chambres">Nos chambres</button>
+                </div>
+
+                 <!-- Insertion d'une vidéo -->
+                <div class="div_video">
+                    <iframe id="main_video" width="560" height="315" src="https://www.youtube.com/embed/CJn3PTWBWuU"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="content_galerie">
+                <div class="div_galerie">
+                    <div class="ligne_galerie_1">
+                        <img class="galerie_images" src="" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt quisquam distinctio libero doloremque. Labore similique saepe eos itaque tenetur cum sapiente explicabo vel. Repellat quis amet omnis magni sapiente!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolorem vel mollitia, iusto consectetur minus incidunt voluptate expedita quibusdam repellendus deserunt non earum id adipisci officia nobis, assumenda, tempore illo.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae maxime delectus vitae at obcaecati, placeat, ipsum amet omnis officia earum, esse fugiat aliquid maiores. Ipsam iste voluptatibus a? Alias, ipsam!</p>
+                        <img class="galerie_images" src="" alt="">
+                        <img class="galerie_images" src="" alt="">
+                    </div>
+                    <div class="ligne_galerie_2">
+                        <img class="galerie_images" src="" alt="">
+                        <img class="galerie_images" src="" alt="">
+                        <img class="galerie_images" src="" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="content_activites">
+                <div class="div_activites">
+                    <div class="text_activites">
+                        <!-- <span class="text_activites_images"> -->
+                            <img id="activites_image" src="Images/image.jpg" alt="image">
+                        <!-- </span> -->
+                        <div class="titre_description_activites">
+                            <h3>Activités</h3>
+                            <p id="p_text_activites">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi odit rerum, necessitatibus exercitationem nulla iste? Harum consectetur omnis sapiente nam quibusdam cumque dolores maiores vel, amet, minus inventore, libero exercitationem.</p>
+                        </div>
+                    </div>
+                    <div class="carte_activites">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt soluta, dolorem explicabo minus vero unde earum omnis veniam culpa vel expedita atque. Illo illum voluptatum enim aliquid, debitis exercitationem hic?</p>
+                    </div>
+                </div>
+            </section>
+        </div>
       
     </main>
     
+    <!-- Pied de Page -->
     <footer class="nav-footer">
         <div class="footer-container">
+            <!-- Logo cliquable -->
             <div class="footer-logo">
                 <p>Bonjour je suis un logo .png </p>
             </div>
 
+
             <div class="footer-map">
                 <!-- Insertion de la carte dans le footer -->
-                <!-- <iframe id="footer-map-body" 
-                    title="Les Deux Tours, Brignon"
-                    width="300"
-                    src="https://www.coordonnees-gps.fr/latitude-longitude/43.977449/4.209964/16/roadmap" allowfullscreen>
-                </iframe>-->
                 <div id="footer-map-div">
                     <div id="footer-map-body"></div>
                     <script>
@@ -69,6 +103,7 @@
                   <a href="https://1map.com/fr/map-embed">Map 1 </a>
                     </div>
                 </div>
+            <!-- Contact Commanditaire -->
             <div class="footer-contact-2">
                 <ul class="footer-contact">
                     <li id="footer-list-item-1" class="footer-list"><img class="footer_images" src="Images/logo_mail.png" alt="logo_mail"><a id="footer-link" href="mailto:d.raso@intech-sud.fr"> vincent.couroyer@club-internet.fr </a></li>
@@ -88,7 +123,23 @@
 <!-- <div class="footer-container">
             <p class="footer-logo">Bonjour je suis un logo .png </p>
 
-            <img id="temp" class="footer-map" src="images/image.jpg" alt="image de test">
+            <div id="footer-map-body"></div>
+                    <script>
+                    (function () {
+                        var setting = {"height":200,"width":500,"zoom":15,"queryString":"Les Deux Tours, Brignon, France","place_id":"ChIJ5_9ORLQ5tBIR_A_PFzuXsbU","satellite":false,"centerCoord":[43.97842839405216,4.21104855632469],"cid":"0xb5b1973b17cf0ffc","lang":"fr","cityUrl":"/france/nimes-2733","cityAnchorText":"Carte de Nîmes, Sud de la France, France","id":"footer-map-body","embed_id":"297355"};
+                        var d = document;
+                        var s = d.createElement('script');
+                        s.src = 'https://1map.com/js/script-for-user.js?embed_id=297355';
+                        s.async = true;
+                        s.onload = function (e) {
+                            window.OneMap.initMap(setting);
+                    }
+                        var to = d.getElementsByTagName('script')[0];
+                        to.parentNode.insertBefore(s, to);
+                  })();
+                  </script>
+                  <a href="https://1map.com/fr/map-embed">Map 1 </a>
+                    </div>
             
             <ul class="footer-contact">
                 <li id="footer-list-item-1" class="footer-list"><img class="footer_images" src="Images/logo_mail.png" alt="logo_mail"><a id="footer-link" href="mailto:d.raso@intech-sud.fr">Envoyer un mail</a></li>

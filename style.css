@@ -1,24 +1,28 @@
-/* Code CSS barre de navigation */
+/* CSS barre de navigation */
 
 body {
     width: 100%;
     height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
     margin: 0px;
     margin-right: 0px;
     background-color: #AC9D8E;
 }
 
 header {
+    width: 100%;
+    height: 25vh;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
-    height: 25vh;
+
     background-color: white;
     
 }
@@ -45,7 +49,7 @@ main {
     justify-content: space-between;
 }
 
-/* Code CSS qui aux liens */
+/* CSS qui des liens */
 
 .nav-links {
     text-decoration: none;
@@ -71,20 +75,21 @@ main {
     padding: 60px 60px;
 }
 
+/* Fin CSS barre de navigation */
 
-
-/* Fin du code CSS barre de navigation */
 
 /* Code CSS pied de page */
 
 footer {
+    width: 100%;
+    height: 20%;
+
     display: flex;
     justify-content: space-evenly;
+
     padding: 5px;
     background-color: white;
     color: black;
-    width: 100%;
-    height: 20%;
 }
 
 .nav-footer {
@@ -93,14 +98,15 @@ footer {
     padding: 0px;
 }
 
-
 /* Partie footer des pages en CSS */
 
 .footer-container {
-    display: flex;
     width: 100%;
+
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
+
     padding: 30px;
     
 }
@@ -111,26 +117,29 @@ footer {
     flex-grow: 0.5;
 }
 
-/* Fin de la partie map en CSS */
+/* Fin de la partie logo en CSS */
+
 
 /* Partie map du footer en CSS */
 
 .footer-map {
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     flex-grow: 3;
 }
 
 #footer-map-div {
-    border: 1px solid black;
     width: 100%;
     height: 100px;
+
+    border: 1px solid black;
 }
 
-
 /* Fin de la partie map en CSS */
+
 
 /* Partie contact du footer en CSS */
 
@@ -142,10 +151,12 @@ footer {
 
 
 .footer-contact {
-    display: flex;
     width: 100%;
+
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
     margin-top: 8px;
     margin-bottom: 8px;
     padding-left: 0px;
@@ -185,6 +196,196 @@ footer {
 /* Fin de la partie footer des pages en CSS */
 
 
+/* Corps de la page d'acceuil en CSS */
+
+
+/* Image de fond du domaine */
+
+.background {
+    height: 300px;
+
+    background-image: url(https://media-cdn.tripadvisor.com/media/photo-m/1280/13/d0/68/40/les-deux-tours.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding-top: 20px;
+}
+
+/* CSS acceuil */
+
+.content_accueil {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+
+    margin-top: 150px;
+    margin-left: 20px;
+}
+
+.button_accueil_chambres {
+    width: 20%;
+    border: solid 3px #DDC1BD;
+	padding:6px 0 6px 0;
+	border-radius:2px;
+	box-shadow:1px 1px 3px #aaa;
+	background:#F1F1F1;
+	font:bold 13px Arial;
+    color:#555;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.button_accueil_chambres:hover {
+    background-color: black ;
+    color: white;
+}
+
+.div_accueil {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.p_accueil_description {
+    line-height: 200%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Fin CSS acceuil */
+
+
+/* CSS video YouTube */
+
+.div_video {
+    width: 560px;
+    height: 320px;
+
+    text-align: center;
+    flex-grow: 1;
+}
+
+#main_video {
+    border: 1px solid black;
+}
+/* Fin CSS video YouTube */
+
+
+/* CSS galerie */
+
+.content_galerie {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    
+    margin-top: 150px;
+    margin: 20px;
+}
+
+.ligne_galerie_1 {
+    width: 100%;
+    height: 250px;
+}
+
+.ligne_galerie_2 {
+    width: 100%;
+    height: 250px;
+}
+
+/* Fin CSS galerie */
+
+
+/* CSS activites */
+
+.content_activites {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    
+    margin-top: 150px;
+    margin: 20px;
+}
+
+.div_activites {
+    width: 80%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+
+    margin: auto;
+    padding: 40px;
+
+    background-color: burlywood;
+    border-radius: 80px;
+}
+
+.text_activites_images {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+#activites_image {
+    width: 100px;
+
+    position: absolute;
+    top: 1760px; left: 300px;
+}
+
+.text_activites {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+
+
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.titre_description_activites {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+#p_text_activites {
+    margin-left: 40px;
+}
+
+.carte_activites {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* Fin CSS activites */
+
+
 /* Partie responsive du code CSS */
 
 /* Adapatation du design sur écran inférieur à 838 px */
@@ -196,14 +397,14 @@ footer {
       margin-top: 100px;
     }
 
-    .List-Header {
+    .nav-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
 
-    .Item-Nav-Header {
+    .nav-list {
         list-style: none;
         padding: 5px 60px;
     }
@@ -224,70 +425,10 @@ footer {
       margin-top: 200px;
     }
 
-    .Item-Nav-Header {
+    .nav-list {
         list-style: none;
         padding: 50px 80px;
     }
 }
 
-.background {
-    background-image: url(https://media-cdn.tripadvisor.com/media/photo-m/1280/13/d0/68/40/les-deux-tours.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 300px;
-    padding-top: 20px;
-    background-size: cover;
-}
-
-h3 {
-    text-align: center;
-    color: white;
-    font-size: 2em;
-}
-
-.Content-accueil {
-    display: flex;
-    flex-direction: column ;
-    justify-self: center ;
-    width: 100%;
-    height: 100%;
-    margin-top: 150px;
-    margin-left: 20px;
-}
-
-.button-accueil-chambres {
-    width: 20%;
-    margin-left: 50px;
-    border: solid 3px #DDC1BD;
-	padding:6px 0 6px 0;
-	border-radius:2px;
-	box-shadow:1px 1px 3px #aaa;
-	background:#F1F1F1;
-	font:bold 13px Arial;
-    color:#555;
-    margin-top: 20px;
-    margin-left: 310px;
-}
-
-.button-accueil-chambres:hover {
-    background-color: black ;
-    color: white;
-}
-
-.div_accueil {
-    width: 50% ;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.p_accueil_description {
-    line-height: 200%;
-}
-
-#main-video {
-    margin-left: 800px;
-    margin-top : -200px;
-}
-  
 /* Fin partie responsive du code CSS */
