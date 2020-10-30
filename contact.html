@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Deux Tours</title>
+    <link href="css/style_contact.css" rel="stylesheet" type="text/css"/>
+    <script>
+      function validateForm()                                    
+{ 
+    var prénom = document.forms["formulaire"]["prénom"];  
+    var nom = document.forms["formulaire"]["nom"];             
+    var email = document.forms["formulaire"]["email"];    
+    var téléphone = document.forms["formulaire"]["téléphone"]; 
+    var objet = document.forms["formulaire"]["objet"];  
+    var message = document.forms["formulaire"]["message"];  
+   
+    if (prénom.value == "")                                  
+    { 
+        document.getElementById('errorprénom').innerHTML="Veuillez entrer un nom valide";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errorprénom').innerHTML="";  
+    }
+
+    if (nom.value == "")                                  
+    { 
+        document.getElementById('errornom').innerHTML="Veuillez entrer un nom valide";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errornom').innerHTML="";  
+    }
+
+
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+        email.focus(); 
+        return false; 
+    } 
+
+    if (téléphone.value == "")                                  
+    { 
+        document.getElementById('errortél').innerHTML="Veuillez entrer un numéro de téléphone valide";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errortél').innerHTML="";  
+    }
+
+    if (message.value == "")                           
+    {
+        document.getElementById('errormessage').innerHTML="Veuillez entrez un message valide"; 
+        message.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errormessage').innerHTML="";  
+    }
+   
+    return true; 
+}
+    </script>
+</head>
+   <body>
+       <header>
+
+       </header>
+      <h1 id="p0">Vous avez une demande particulière ?</h1>
+      <hr>
+      <p id="p1">Ou simplement une question ?</p>
+      <hr>
+      <p id="p2">Contactez nous</p>
+      <hr>
+        <div class="container">
+          <p id="titreform">Formulaire</p>
+            <form name="formulaire" onsubmit="return validateForm()" method="GET">
+
+              <label for="prénom"></label>
+              <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom">
+              <span class="error" id="errorprénom"></span>
+          
+              <label for="nom"></label>
+              <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom">
+              <span class="error" id="errornom"></span>
+
+              <label for="email"></label>
+              <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail">
+              <span class="error" id="errormail"></span>
+
+              <label for="téléphone"></label>
+              <input type="tel" id="téléphone" name="téléphone" placeholder="Entrez votre numéro de téléphone">
+              <span class="error" id="errortél"></span>
+          
+          
+              <label for="objet"></label>
+              <select id="objet" name="objet">
+                <option value="objet de votre demande">Objet de votre demande</option>
+                <option value="réservation">Réservation</option>
+                <option value="demande d'informations">Demande d'informations</option>
+                <option value="demande d'emploi">Demande d'emploi</option>
+                <option value="autre demande">Autre demande</option>
+              </select>
+          
+              <label for="message"></label>
+              <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:85%"></textarea>
+              <span class="error" id="errormessage"></span>
+          
+              <input type="submit" id="bouton" value="Envoyer">
+          
+            </form>
+          </div>
+      <footer>
+
+      </footer>
+   </body>
+</html>
