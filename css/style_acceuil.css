@@ -75,6 +75,49 @@ main {
     padding: 60px 60px;
 }
 
+.nav_buttons {
+    /* width: 30%; */
+    zoom: 1;
+    padding: 6px 20px;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid #bbb;
+    overflow: visible;
+    font: bold 13px arial, helvetica, sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black;
+    background-color: #ddd;
+  
+  transition: background-color .2s ease-out;
+  background-clip: padding-box; /* Fix bleeding */
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  text-shadow: 0 1px 0 rgba(255,255,255, .9);
+
+  user-select: none;
+}
+
+.nav_buttons:hover{
+    background-color: #eee;
+    color: black;
+  }
+  
+.nav_buttons:active{
+    background: #e9e9e9;
+    position: relative;
+    top: 1px;
+    text-shadow: none;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  }
+
+nav {
+    width: 600px;
+    margin-left: 100px;
+}
+
 /* Fin CSS barre de navigation */
 
 
@@ -133,7 +176,7 @@ footer {
 
 #footer-map-div {
     width: 100%;
-    height: 100px;
+    height: 100%;
 
     border: 1px solid black;
 }
@@ -226,7 +269,7 @@ footer {
     margin-left: 20px;
 }
 
-.button_accueil_chambres {
+/*.button_accueil_chambres {
     width: 20%;
     border: solid 3px #DDC1BD;
 	padding:6px 0 6px 0;
@@ -237,12 +280,54 @@ footer {
     color:#555;
     margin: auto;
     margin-top: 20px;
-}
+} 
 
 .button_accueil_chambres:hover {
     background-color: black ;
     color: white;
+} */
+
+.button_accueil_chambres {
+    width: 20%;
+    display: inline-block;
+    align-self: center;
+    zoom: 1;
+    padding: 6px 20px;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid #bbb;
+    overflow: visible;
+    font: bold 13px arial, helvetica, sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black;
+    background-color: #ddd;
+  
+  transition: background-color .2s ease-out;
+  background-clip: padding-box; /* Fix bleeding */
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  text-shadow: 0 1px 0 rgba(255,255,255, .9);
+
+  user-select: none;
 }
+
+.button_accueil_chambres:hover{
+    background-color: #eee;
+    color: black;
+  }
+  
+.button_accueil_chambres:active{
+    background: #e9e9e9;
+    position: relative;
+    top: 1px;
+    text-shadow: none;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  }
+
+
 
 .div_accueil {
     width: 50%;
@@ -281,33 +366,56 @@ footer {
     display: flex;
     justify-self: center;
     align-items: center;
+    justify-content: center;
     
     margin-top: 150px;
     margin: 20px;
 }
 
-* {
+.div_galerie * {
     box-sizing: border-box;
-  }
+}
   
-  /* Position the image container (needed to position the left and right arrows) */
-  .div_galerie {
+/* Position the image container (needed to position the left and right arrows) */
+.div_galerie {
+    display: flex;
     position: relative;
-  }
+    flex-direction: column;
+    justify-content: center;
+    width: 60%; 
+}
+ 
+.galerie_displayed_images {
+    height: 586.781px;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: 100% 30%;
+}
+
+#petit_dej {
+    height: 586.781px;
+    object-fit: contain;
+    overflow: hidden;
+    align-self: center;
+    object-position: 50%;
+    margin-top: 5px;
+}
+
+/* Hide the images by default */
+.galerie_slides {
+    display: none;  
+    background-color: #AC9D8F;
+    box-shadow: inset -1px 0 0 black, inset 1px 0 0 black, inset 0 1px 0 black;
+}
   
-  /* Hide the images by default */
-  .galerie_slides {
-    display: none;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
     cursor: pointer;
-  }
+}
   
-  /* Next & previous buttons */
-  .prev,
-  .next {
+/* Next & previous buttons */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -320,58 +428,74 @@ footer {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
-  }
+}
   
-  /* Position the "next button" to the right */
-  .next {
+/* Position the "next button" to the right */
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+}
   
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
+}
   
-  /* Number text (1/3 etc) */
-  .numbertext {
+/* Number text (1/3 etc) */
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-  }
+}
   
-  /* Container for image text */
-  .caption-container {
+/* Container for image text */
+.caption-container {
     text-align: center;
     background-color: #222;
     padding: 2px 16px;
     color: white;
-  }
+}
+
+
+.galerie_first_line {
+    display: flex;
+    flex-direction: row;
+    height: 117.344px;   
+}
+
+.galerie_second_line {
+    display: flex;
+    flex-direction: row;
+    height: 117.344px;
+}
   
-  .column:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
   
-  /* Six columns side by side */
-  .row {
+/* Six columns side by side */
+.column {
     float: left;
     width: 20%;
-  }
+}
   
-  /* Add a transparency effect for thumnbail images */
-  .demo {
+/* Add a transparency effect for thumnbail images */
+.demo {
     opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
+    height: 117.344px; 
+    object-fit: cover;
+    overflow: hidden;
+    object-position: 80% 90%;
+}
+
+.active, .demo:hover {
     opacity: 1;
-  }
+}
 
 /* Fin CSS galerie */
 
@@ -413,11 +537,19 @@ footer {
     text-align: center;
 }
 
+.image_activites {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+
+    margin-left: 80px;
+}
+
 #activites_image {
     width: 100px;
 
-    position: absolute;
-    top: 1760px; left: 300px;
 }
 
 .text_activites {
@@ -426,9 +558,7 @@ footer {
     align-items: flex-start;
     text-align: center;
 
-
-    margin-left: 80px;
-    margin-right: 80px;
+    padding-left: 20px;
 }
 
 .titre_description_activites {
@@ -437,6 +567,10 @@ footer {
     justify-self: center;
     align-items: center;
     text-align: center;
+
+    padding-left: 80px;
+    margin-right: 80px;
+
 }
 
 #p_text_activites {
@@ -446,6 +580,7 @@ footer {
 .carte_activites {
     margin-left: 80px;
     margin-right: 80px;
+    align-self: center;
 }
 
 /* Fin CSS activites */
