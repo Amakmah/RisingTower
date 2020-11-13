@@ -3,8 +3,9 @@ body {
 	height: 100%;
 	margin: 0;
 	font-size: 16px;
-	font-family: sans-serif;
+	font-family: sans-serif;	
 }
+
 
 section {
   width: 100%;
@@ -35,20 +36,20 @@ section {
 
 .li_card {
 	display: inline-block;
-	width: 90%;
-	max-width: 20rem;
+	width: 25%;
 	margin: 1rem;
 	font-size: 1rem;
 	text-decoration: none;
 	overflow: hidden;
-	box-shadow: 0 0 3rem 1rem #AC9D8E;
-  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
-  background-color: #F1F1F1;
+	box-shadow: 0 0 5rem 1rem rgb(238, 220, 230);
+	background-color: #F1F1F1;
+	opacity: 0.9;
 }
 
 .li_card:hover {
 	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem #F1F1F1;
+	box-shadow: 0 0.5em 1rem -1rem #F1F1F1;
+	opacity: 1;
 }
 
 .chambre_card_description {
@@ -62,19 +63,22 @@ section {
 	margin: 0 0 0.5em;
 }
 
-#bouton_card {
+.chambre_card_image {
+	border-top: solid 5px rgb(221, 181, 181);
+}
+
+.bouton_card {
   height: 50px;
-  width: 80%;
-  margin-bottom: 20px;
+  width: 100%;
   border: solid white 4px;
-  background-color: #DDC1BD;
+  background-color: #9ed1cb;
   color: white;
   cursor: pointer;
   font-size: 1em;
 }
 
-#bouton_card:hover {
-  background-color: #AC9D8E;
+.bouton_card:hover {
+  background-color: #638183;
 
 }
 
@@ -86,15 +90,84 @@ section {
     top: 0;
     width: 100%;
     height: 100%; 
-    background-color: rgba(0,0,0,0.4); 
+	background-color: rgba(0,0,0,0.4); 
+	display: flex;
+	justify-content: center;
+}
+
+.modal_card_description {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
 }
 
 .modal_card {
-  width: 50%;
+  width: 60%;
   height: 80%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  background-color: white;
+  border: solid 5px #9ed1cb ;
+  opacity: 0.9;
+  margin-top: 70px;
+}
+
+.modal_card_name {
+	background-color: #638183;
+	height: 80%;
+	border-bottom: solid 5px #9ed1cb;
+	text-align: center;
+	color: white;
+}
+
+.modal_card_image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	background-color: rgb(230, 240, 240);	
+}
+
+.image_Joséphine {
+	width: 250px;
+	height: 160px;
+}
+
+.modal_card_content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	width: 100%;
+	margin-top: auto;
+	background-color: rgb(211, 224, 224) ;
+	padding: 20px;
+}
+
+.modal_card_content p {
+	line-height: 25px;
+}
+
+.article_content {
+	width: 100%;
+	height: 100%;
+	margin-top: 80px;
+}
+
+.article-content_h3 {
+	letter-spacing: 3px;
+	margin-top: -60px;
+	text-align: center;
+}
+
+.modal_content_item {
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 25px;
 }
 
 
