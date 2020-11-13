@@ -69,34 +69,35 @@
        </header>
       <h1 id="p0">Vous avez une demande particulière ?</h1>
       <hr>
-      <p id="p1">Ou simplement une question ?</p>
+      <!--<p id="p1">Ou simplement une question ?</p>
       <hr>
       <p id="p2">Contactez nous</p>
-      <hr>
+      <hr>-->
         <div class="container">
           <p id="titreform">Formulaire</p>
-            <form name="formulaire" onsubmit="return validateForm()" method="GET">
+            <form name="formulaire" method="GET"> <!--onsubmit="return validateForm()"-->
+
 
               <label for="prénom"></label>
-              <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom">
+              <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
               <span class="error" id="errorprénom"></span>
           
               <label for="nom"></label>
-              <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom">
+              <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
               <span class="error" id="errornom"></span>
 
               <label for="email"></label>
-              <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail">
+              <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail" required>
               <span class="error" id="errormail"></span>
 
               <label for="téléphone"></label>
-              <input type="tel" id="téléphone" name="téléphone" placeholder="Entrez votre numéro de téléphone">
+              <input type="tel" id="téléphone" name="téléphone" placeholder="Entrez votre numéro de téléphone" pattern="[0-9 + ()]*" required>
               <span class="error" id="errortél"></span>
           
           
               <label for="objet"></label>
-              <select id="objet" name="objet">
-                <option value="objet de votre demande">Objet de votre demande</option>
+              <select id="objet" name="objet" required>
+                <option value="">Entrez l'objet de votre demande</option>
                 <option value="réservation">Réservation</option>
                 <option value="demande d'informations">Demande d'informations</option>
                 <option value="demande d'emploi">Demande d'emploi</option>
@@ -104,7 +105,7 @@
               </select>
           
               <label for="message"></label>
-              <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:85%"></textarea>
+              <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:85%" rows="5" required></textarea>
               <span class="error" id="errormessage"></span>
           
               <input type="submit" id="bouton" value="Envoyer">

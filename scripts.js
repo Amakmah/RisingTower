@@ -33,8 +33,6 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-
-
 // footer map function JS
 (function () {
   var setting = {"height":200,"width":500,"zoom":15,"queryString":"Les Deux Tours, Brignon, France","place_id":"ChIJ5_9ORLQ5tBIR_A_PFzuXsbU","satellite":false,"centerCoord":[43.97842839405216,4.21104855632469],"cid":"0xb5b1973b17cf0ffc","lang":"fr","cityUrl":"/france/nimes-2733","cityAnchorText":"Carte de Nîmes, Sud de la France, France","id":"footer-map-body","embed_id":"297355"};
@@ -48,3 +46,15 @@ function showSlides(n) {
   var to = d.getElementsByTagName('script')[0];
   to.parentNode.insertBefore(s, to);
 })();
+
+// Fonction pour afficher les chambres 
+function afficher_card(id) {
+if(document.getElementById(id).style.visibility=="hidden")
+{
+document.getElementById(id).style.visibility="visible";
+}
+else{
+document.getElementById(id).style.visibility="hidden";
+}
+return true;
+}
