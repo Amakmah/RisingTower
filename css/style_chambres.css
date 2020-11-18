@@ -1,174 +1,355 @@
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	font-size: 16px;
-	font-family: sans-serif;	
-}
-
-
-section {
-  width: 100%;
-  height: 100%;
-  margin-top: 150px;
-}
-
-.chambre_card_image {
-	display: block;
-	min-height: 20rem; 
-	background: #fff center center no-repeat;
-	background-size: cover;
-}
-
-.chambre_card_image > img {
-	display: block;
-	width: 100%;
-}
-
-.ul_card {
-	display: block;
-	margin: 1rem auto;
-	padding: 0;
-	font-size: 0;
-	text-align: center;
-	list-style: none;
-}
-
-.li_card {
-	display: inline-block;
-	width: 25%;
-	margin: 1rem;
-	font-size: 1rem;
-	text-decoration: none;
-	overflow: hidden;
-	box-shadow: 0 0 5rem 1rem rgb(238, 220, 230);
-	background-color: #F1F1F1;
-	opacity: 0.9;
-}
-
-.li_card:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 1rem -1rem #F1F1F1;
-	opacity: 1;
-}
-
-.chambre_card_description {
-	display: block;
-	padding: 1em 0.5em;
-	color: #515151;
-	text-decoration: none;
-}
-
-.chambre_card_description > h2 {
-	margin: 0 0 0.5em;
-}
-
-.chambre_card_image {
-	border-top: solid 5px rgb(221, 181, 181);
-}
-
-.bouton_card {
-  height: 50px;
-  width: 100%;
-  border: solid white 4px;
-  background-color: #9ed1cb;
-  color: white;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.bouton_card:hover {
-  background-color: #638183;
-
-}
-
-#modal_description {
-    visibility: hidden;
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
-    top: 0;
-    width: 100%;
-    height: 100%; 
-	background-color: rgba(0,0,0,0.4); 
-	display: flex;
-	justify-content: center;
-}
-
-.modal_card_description {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: 100%;
-}
-
-.modal_card {
-  width: 60%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: white;
-  border: solid 5px #9ed1cb ;
-  opacity: 0.9;
-  margin-top: 70px;
-}
-
-.modal_card_name {
-	background-color: #638183;
-	height: 80%;
-	border-bottom: solid 5px #9ed1cb;
-	text-align: center;
-	color: white;
-}
-
-.modal_card_image {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	width: 100%;
-	background-color: rgb(230, 240, 240);	
-}
-
-.image_Joséphine {
-	width: 250px;
-	height: 160px;
-}
-
-.modal_card_content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	height: 100%;
-	width: 100%;
-	margin-top: auto;
-	background-color: rgb(211, 224, 224) ;
-	padding: 20px;
-}
-
-.modal_card_content p {
-	line-height: 25px;
-}
-
-.article_content {
-	width: 100%;
-	height: 100%;
-	margin-top: 80px;
-}
-
-.article-content_h3 {
-	letter-spacing: 3px;
-	margin-top: -60px;
-	text-align: center;
-}
-
-.modal_content_item {
-	font-weight: bold;
-	font-size: 13px;
-	line-height: 25px;
-}
-
-
-
+	margin:0;
+		padding:0;
+		background:rgb(250, 250, 250);
+	}
+	
+	
+	html { font-size: 62.5%; }
+	
+	* { box-sizing: border-box; }
+	
+	.wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	.header .wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.header {
+		background:rgb(250, 250, 250);
+		display: flex;
+		height: 80px;
+		flex-direction: row;
+	}
+	
+	.header_logo {
+		height: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 10px;
+	  
+	}
+	
+	.header_logo a {
+		color: black;
+		font-family: 'Asap', sans-serif;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 26px;
+		text-decoration: none;
+		display: flex;
+		height: 100%;
+		align-items: center;
+	}
+	
+	
+	
+	.header_usermenu {
+		display: flex;
+		justify-content: flex-end;
+		flex-grow: 1;
+		height: 100%;
+		align-items: center;
+	}
+	
+	.header_usermenu_item {
+		display: flex;
+		height: 80px;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.header_usermenu_item_link {
+		text-decoration: none;
+		color: black;
+		font-weight: 300;
+		font-size: 20px;
+		display: flex;
+		transition: .25s ease;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		padding: 0 30px;
+	}
+	
+	.header_usermenu_item_link:hover {
+		background: rgb(240, 240, 240);
+	}
+	
+	.header_usermenu_icon {
+		color: rgb(250, 250, 250);
+		font-size: 20px;
+		margin-right: 10px;
+	}
+	
+	.header_usermenu_responsive-icon {
+		height: 100%;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 26px;
+		color: #fff;
+		display: none;
+		flex-grow: 1;
+	}
+	
+	.header_usermenu_responsive-icon i {
+	  height: 80%;
+	  width: 70px;
+	  text-align: center;
+	  line-height: 80px;
+	  cursor: pointer;
+	  margin-right: 35px;
+	}
+	
+	@media (max-width: 768px) {
+	
+		.banner {
+			height: 20rem;
+		}
+	  .wrapper {
+			width: 95%;
+	  }
+	  .header_usermenu_responsive-icon {
+		display:flex;
+	  }
+	  
+	  .header_usermenu {
+		display:none;
+	  }
+	  
+	  .header_usermenu.clicked {
+		display: flex;
+		position: absolute;
+		flex-direction: column;
+		height: 400px;
+		width: 100%;
+		background: rgb(241, 241, 241);
+		align-self: self-start;
+		justify-content: space-around;
+		margin: 0 -2.5%;
+		margin-top: 70px;
+	  }
+	  
+	  .header_usermenu.clicked .header_usermenu_item,
+	  .header_usermenu.clicked .header_usermenu_item a {
+		  width: 100%;
+	  }
+	
+	  .header_usermenu.clicked:hover {
+		  background: cadetblue;
+	
+	  }
+	  
+	  .main-menu-responsive-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.main-menu-responsive-icon i {
+		height: 40px;
+		width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		color: #666;
+		flex-grow: 1;
+	  }
+	}
+	
+	
+	.burger_menu {
+		cursor: pointer;
+		background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/768px-Ic_menu_48px.svg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	
+	}
+	
+	
+	
+	body.loaded {
+	  opacity: 1;
+	  transition: 1s opacity;
+	}
+	
+	
+	.banner {
+	  position: relative;
+	  width: 100%;
+	  height: 40rem;
+	  padding: 0 5%;
+	  overflow: hidden;
+	  backface-visibility: hidden;
+	}
+	
+	
+	.banner .background {
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  z-index: -1;
+	  transform: translate3d(0,0,0) scale(1.25);
+	  background: black url(https://cf.bstatic.com/images/hotel/max1280x900/174/174790597.jpg) no-repeat  ; 
+	  background-size: cover;
+	  background-position: 50% 50%;
+	}
+	
+	
+	.loaded .banner .background {
+	  transform: scale(1);
+	  transition: 6.5s transform;
+	}
+	
+	.banner h1 {
+	  color: #EEE;
+	  margin: 0;
+	  line-height: 10rem;
+	  text-transform: uppercase;
+	  text-shadow: 0 0 .3rem black;
+	  margin-left: 430px;
+	}
+	
+	.main_chambres {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+		grid-gap: 80px;
+	  }
+	  
+	  .main_chambres > article {
+		border: 1px solid rgb(202, 183, 183);
+		box-shadow: 4px 7px 6px 4px rgb(202, 183, 183);
+	  }
+	  
+	  .main_chambres > article img {
+		max-width: 100%;
+	  }
+	  
+	  .main_chambres .text {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	
+	  .bouton_card {
+		  height: 50px;
+		  width: 100%;
+		  border: solid white 4px;
+		  background-color: #9ed1cb;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 1em;
+	  }
+	  
+	  .bouton_card:hover {
+		  background-color: #638183;
+		
+		}
+	.container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding-top: 100px;
+	}
+	
+	
+	#modal_description {
+		visibility: hidden;
+		position: fixed; 
+		z-index: 1; 
+		padding-top: 100px; 
+		top: 0;
+		width: 100%;
+		height: 100%; 
+		background-color: rgba(0,0,0,0.4); 
+		display: flex;
+		justify-content: center;
+	}
+	
+	.modal_card_description {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.modal_card {
+	  width: 60%;
+	  height: 80%;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-around;
+	  background-color: white;
+	  border: solid 5px #9ed1cb ;
+	  opacity: 0.9;
+	  margin-top: 70px;
+	}
+	
+	.modal_card_name {
+		background-color: #638183;
+		height: 80%;
+		border-bottom: solid 5px #9ed1cb;
+		text-align: center;
+		color: white;
+	}
+	
+	.modal_card_image {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		background-color: rgb(230, 240, 240);	
+	}
+	
+	.image_Joséphine {
+		width: 250px;
+		height: 160px;
+	}
+	
+	.modal_card_content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+		margin-top: auto;
+		background-color: rgb(211, 224, 224) ;
+		padding: 20px;
+	}
+	
+	.modal_card_content p {
+		line-height: 25px;
+	}
+	
+	
+	
+	.article_content {
+		width: 100%;
+		height: 100%;
+		margin-top: 80px;
+	}
+	
+	.article-content_h3 {
+		letter-spacing: 3px;
+		margin-top: -60px;
+		text-align: center;
+	}
+	
+	.modal_content_item {
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 25px;
+	}

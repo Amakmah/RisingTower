@@ -1,3 +1,20 @@
+//Jquery menu burger à laisser impérativement en premier
+$(function(){
+  $(".header_usermenu_responsive-icon i").click(function(){
+    $(".header_usermenu").toggleClass("clicked");
+  });
+  
+  $(".main-menu-responsive-icon i").click(function(){
+    $(".main-menu .mobile-hide").toggleClass("clicked");
+  });
+});
+
+//Chargement de l'image 
+window.onload = function() {
+  document.body.className += ' loaded'
+};
+
+
 // gallery function JS
 
 // Init first iamge as default displayed image
@@ -58,3 +75,6 @@ document.getElementById(id).style.visibility="hidden";
 }
 return true;
 }
+
+
+
