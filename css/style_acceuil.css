@@ -1,6 +1,6 @@
-/* CSS barre de navigation */
+/* MIS EN COMMENTAIRE CAR NOUVEAU HEADER RECUPERE SUR LE CSS DES CHAMBRES */
 
-body {
+/*body {
     width: 100%;
     height: 100%;
 
@@ -49,7 +49,7 @@ main {
     justify-content: space-between;
 }
 
-/* CSS qui des liens */
+
 
 .nav-links {
     text-decoration: none;
@@ -78,7 +78,7 @@ main {
 nav {
     width: 600px;
     margin-left: 100px;
-}
+}  */
 
 /* Fin CSS barre de navigation */
 

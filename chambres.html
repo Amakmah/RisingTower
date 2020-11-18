@@ -1,69 +1,84 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Deux Tours</title>
-    <link href="css/style_chambres.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style_acceuil.css" rel="stylesheet" type="text/css"/>
-    <script src="scripts.js"></script>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nos chambres</title>
+        <link href="css/style_chambres.css" rel="stylesheet" type="text/css"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="scripts.js"></script>   
+    </head>
 
-<body>
-    <header>
-        <div class="header-title">
-            <h1 id="header-h1">Les deux tours</h1>
-            <h2 id="header-h2">Maison d'hôtes et gite de charme</h2>
+    <body>
+         <!-- Haut de page -->
+        <header class="header">
+            <div class="wrapper">
+                <div class="header_logo">
+                    <a href="" class="header_logo_link">Les deux tours </a>
+                </div>
+
+                <div class="header_usermenu_responsive-icon">
+                    <i class="burger_menu"></i>
+                </div>
+
+                <div class="header_usermenu">
+                    <li class="header_usermenu_item">
+                        <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+                    </li>
+
+                    <li class="header_usermenu_item">
+                        <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+                    </li>
+
+                    <li class="header_usermenu_item">
+                        <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+                    </li>
+
+                    <li class="header_usermenu_item">
+                        <a href="#" class="header_usermenu_item_link">à propos</a>
+                    </li>
+                </div>
+            </div>
+        </header>
+        <div class="banner">
+            <span class="background"></span>
         </div>
-        <nav>
-        <!-- Barre de navigation -->
-            <ul class="nav-container">
-                <li class="nav-list"><a class="nav-links" href="index.html">Accueil</a></li>
-                <li class="nav-list"><a class="nav-links" href="chambres.html">Nos chambres</a></li>
-                <li class="nav-list"><a class="nav-links" href="contact.html">Nous contacter</a></li>
-            </ul>  
-        </nav>
-    </header>
-    <section>
-        <ul class="ul_card">
-	
-            <li class="li_card">
-                <a class="chambre_card_image" href=""  style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/227935231.jpg?k=7ff870710ecefdccf69cbf392ea5bd488516fc3f665920ebf0f780568ae4fd15&o=);">    
-                </a>
-                <a class="chambre_card_description" href="">
-                    <h2>Hortense</h2>
-                    <p>La lumineuse</p>
-                </a>
-                <button class="bouton_card"  id="bouton_card_Hortense">Voir la description</button>
-            </li>
-            
-            <li class="li_card">
-                <a class="chambre_card_image" href="" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/174791537.jpg?k=cc8581ad3df512360449c4f057abcf28d5825f0f1f5e27c9348513d13328cca6&o=);">
-                </a>
-                <a class="chambre_card_description" href="">
-                    <h2>Héloise</h2>
-                    <p>La charmante</p>
-                </a>
-                <button class="bouton_card"  id="bouton_card_Héloise">Voir la description</button>
-            </li>
-            
-            <li class="li_card">
-                <a class="chambre_card_image" href="" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/59592294.jpg?k=2ac0cb33864a0bc9dea9d9ffdc29e9d64a27d38ff3305693f0e5f73de3723d93&o=);">
-                </a>
-                <a class="chambre_card_description" href="">
-                    <h2>Joséphine</h2>
-                    <p>La chaleureuse</p>
-                </a>
-                <button class="bouton_card"  id="bouton_card" onclick="javascript:afficher_card('modal_description');">Voir la description</button>
-            </li>
-                       
-        </ul>
-    </section>
+         <!-- Fin haut de page -->
 
+        <!-- Cards chambres -->
+
+        <section class="container">
+            <main class="main_chambres">
+                <article>
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/59592294.jpg?k=2ac0cb33864a0bc9dea9d9ffdc29e9d64a27d38ff3305693f0e5f73de3723d93&o=" alt="Sample photo">
+                    <div class="text">
+                        <h2>Joséphine</h2>
+                        <h3>La chaleureuse</h3>
+                        <button class="bouton_card"  id="bouton_card_Joséphine" id="bouton_card" onclick="javascript:afficher_card('modal_description');">Voir la description</button>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/227935231.jpg?k=7ff870710ecefdccf69cbf392ea5bd488516fc3f665920ebf0f780568ae4fd15&o=);" alt="Sample photo">
+                    <div class="text">
+                        <h2>Hortense</h2>
+                        <h3>La lumineuse</h3>
+                        <button class="bouton_card"  id="bouton_card_Hortense">Voir la description</button>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/174791537.jpg?k=cc8581ad3df512360449c4f057abcf28d5825f0f1f5e27c9348513d13328cca6&o=">
+                    <div class="text">
+                        <h2>Héloise </h2>
+                        <h3> La charmante</h3>
+                        <button class="bouton_card"  id="bouton_card_Héloise">Voir la description</button>
+                    </div>
+                </article>
+            </main>
+        </section>
+        <!-- Fin des cards -->
 
         <!-- Modal -->
       
-       <div id="modal_description" class="modal_description">
+        <div id="modal_description" class="modal_description">
             <div class="modal_card">
                 <div class="modal_card_name">
                     <h2>Chambre Joséphine</h2>
@@ -73,7 +88,7 @@
                     <section class="modal_card_content">
                         <article class="article_content">
                             <h3 class="article-content_h3">Caractéristiques</h3>
-                            <p>Elle se situe côté piscine et jardin, avec une ambiance douce et chaleureuse avec un ancien potager du XVIIIème siècle et ses carreaux avec cabochons.
+                                <p>Elle se situe côté piscine et jardin, avec une ambiance douce et chaleureuse avec un ancien potager du XVIIIème siècle et ses carreaux avec cabochons.
                                 <br> Joséphine dispose d’un coin salle de bain ouvert sur la chambre avec une douche hydro ainsi que des toilettes privées.
                                 Un plateau de courtoisie est à disposition. </p>
                                 <ul class="modal_content_list">
@@ -86,15 +101,14 @@
                             <h3 class="article-content_h3">Tarifs</h3>
                         </article>
                     </section>
-
                     <div class="modal_card_image">
                         <img class="image_Joséphine" src="Images/Joséphine_1.jpg" alt="">
                         <img class="image_Joséphine" src="Images/Joséphine_2.jpg" alt="">
                         <img class="image_Joséphine" src="Images/Joséphine_3.jpg" alt="">
                     </div>
                 </div>
-
             </div>       
-       </div>
+        </div>
     </body>
 </html>
+            
