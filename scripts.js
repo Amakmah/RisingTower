@@ -9,6 +9,12 @@ $(function(){
   });
 });
 
+//Chargement de l'image 
+window.onload = function() {
+  document.body.className += ' loaded'
+};
+
+
 // gallery function JS
 
 // Init first iamge as default displayed image
@@ -70,9 +76,5 @@ document.getElementById(id).style.visibility="hidden";
 return true;
 }
 
-//Chargement de l'image 
-window.onload = function() {
-  document.body.className += ' loaded'
-};
 
 
