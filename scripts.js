@@ -1,5 +1,5 @@
 
-//Jquery menu burger à laisser impérativement en premier
+//Jquery pour le menu burger 
 $(function(){
   $(".header_usermenu_responsive-icon i").click(function(){
     $(".header_usermenu").toggleClass("clicked");
@@ -10,11 +10,7 @@ $(function(){
   });
 });
 
-
-
-
-
-//Chargement de l'image 
+//Chargement de l'image pour la bannière
 window.onload = function() {
   document.body.className += ' loaded'
 };
@@ -66,20 +62,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
-
-
-// Fonction pour afficher les chambres 
-function afficher_card(id) {
-if(document.getElementById(id).style.visibility=="hidden")
-{
-document.getElementById(id).style.visibility="visible";
-}
-else{
-document.getElementById(id).style.visibility="hidden";
-}
-return true;
 }
 
 
