@@ -14,13 +14,13 @@
     </script>
 </head>
 
-<body>
-    <!-- Haut de page -->
-    <header class="header">
-        <div class="wrapper">
-            <div class="header_logo">
-                <a href="" class="header_logo_link">Les deux tours </a>
-            </div>
+   <body>
+         <!-- Haut de page -->
+         <header class="header">
+            <nav class="header_nav">
+                <div class="header_title">
+                    <h2 class="header_h2">Les deux tours </h2>
+                </div>
 
             <div class="header_usermenu_responsive-icon">
                 <i class="burger_menu"></i>
@@ -77,6 +77,48 @@
             <!--Liste déroulante pour la sélection d'objet-->
             <label for="objet"></label>
             <select id="objet" name="objet" required>
+                    <li class="header_usermenu_item">
+                        <a href="#" class="header_usermenu_item_link">A propos</a>
+                    </li>
+                </div>
+            </nav>
+        </header>
+        <!-- Fin haut de page -->
+        <!-- Bannière image  -->
+        <div class="banner">
+                <span class="background_banner"></span>
+        </div>
+        <!-- Fin bannière image  -->
+
+      <h1 id="p0">Vous avez une demande particulière ?</h1>
+      <hr>
+      <!--<p id="p1">Ou simplement une question ?</p>
+      <hr>
+      <p id="p2">Contactez nous</p>
+      <hr>-->
+        <div class="container">
+          <p id="titreform">Formulaire</p>
+            <form name="formulaire" method="GET"> <!--onsubmit="return validateForm()"-->
+
+
+              <label for="prénom"></label>
+              <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
+              <span class="error" id="errorprénom"></span>
+          
+              <label for="nom"></label>
+              <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
+              <span class="error" id="errornom"></span>
+
+              <label for="email"></label>
+              <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail" required>
+              <span class="error" id="errormail"></span>
+
+              <label for="téléphone"></label>
+              <input type="tel" id="téléphone" name="téléphone" placeholder="Entrez votre numéro de téléphone" pattern="[0-9 + ()]*" required>
+              <span class="error" id="errortél"></span>
+          
+          
+              <label for="objet"></label>
                 <option value="">Entrez l'objet de votre demande</option>
                 <option value="réservation">Réservation</option>
                 <option value="demande d'informations">Demande d'informations</option>
@@ -95,8 +137,8 @@
     <footer class="nav-footer">
         <div class="footer-container">
             <!-- Logo cliquable -->
-            <div class="header_logo">
-                <a href="" class="header_logo_link">Les deux tours </a>
+            <div class="header_title">
+                <h2 class="header_h2">Les deux tours </h2>
             </div>
 
 
