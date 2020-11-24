@@ -1,88 +1,3 @@
-/* MIS EN COMMENTAIRE CAR NOUVEAU HEADER RECUPERE SUR LE CSS DES CHAMBRES */
-
-/*body {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    margin: 0px;
-    margin-right: 0px;
-    background-color: #d6cdc4 ;
-}
-
-header {
-    width: 100%;
-    height: 25vh;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-
-    background-color:  #dfdbd7 ;
-    border-bottom: solid 1px white;   
-}
-
-main {
-    width: 100%;
-    height: 50%;   
-}
-
-#header-h1 {
-    font-size: 3em; 
-    margin-left: 40px; 
-}
-
-#header-h2 {
-    font-style: italic;
-    font-size: 2em;
-}
-
-.nav-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-
-.nav-links {
-    text-decoration: none;
-    font-size: 2em;
-    background-color: #97a8a2 ;
-    color: white;
-    padding: 10px;
-    max-width: 25%;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 10px;
-    border:white solid 2px ;
-    font-size: 1em;
-}
-
-.nav-links:hover {
-    background-color: #638183;
-    border: solid white 4px;
-}
-
-.nav-list {
-    list-style: none;
-    padding: 40px;
-}
-
-nav {
-    width: 600px;
-    margin-left: 100px;
-}  */
-
-/* Fin CSS barre de navigation */
-
-
 /* Code CSS pied de page */
 
 footer {
@@ -209,7 +124,6 @@ footer {
 
 /* Corps de la page d'acceuil en CSS */
 
-
 /* Image de fond du domaine */
 
 .background {
@@ -237,24 +151,6 @@ footer {
     margin-left: 20px;
 }
 
-/*.button_accueil_chambres {
-    width: 20%;
-    border: solid 3px #DDC1BD;
-	padding:6px 0 6px 0;
-	border-radius:2px;
-	box-shadow:1px 1px 3px #aaa;
-	background:#F1F1F1;
-	font:bold 13px Arial;
-    color:#555;
-    margin: auto;
-    margin-top: 20px;
-} 
-
-.button_accueil_chambres:hover {
-    background-color: black ;
-    color: white;
-} */
-
 .button_accueil_chambres {
     width: 25%;
     display: inline-block;
@@ -271,11 +167,11 @@ footer {
     color: white;
     background-color: #9ed1cb;
   
-  transition: background-color .2s ease-out;
-  background-clip: padding-box; /* Fix bleeding */
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
-  text-shadow: 0 1px 0 rgba(255,255,255, .9);
+    transition: background-color .2s ease-out;
+    background-clip: padding-box; /* Fix bleeding */
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    text-shadow: 0 1px 0 rgba(255,255,255, .9);
 
   user-select: none;
 }
@@ -326,7 +222,6 @@ footer {
 }
 /* Fin CSS video YouTube */
 
-
 /* CSS galerie */
 
 .content_galerie {
@@ -334,16 +229,16 @@ footer {
     justify-self: center;
     align-items: center;
     justify-content: center;
+    
     margin-top: 150px;
-    background-color: rgb(220, 232, 236);
-    border-top: solid 5px rgb(197, 184, 184);
+    margin: 20px;
 }
 
 .div_galerie * {
     box-sizing: border-box;
 }
   
-/* Position the image container (needed to position the left and right arrows) */
+/* Placer le conteneur d'images (nécéssaire pour placer les flèches de navigation de la galerie) */
 .div_galerie {
     display: flex;
     position: relative;
@@ -353,34 +248,25 @@ footer {
 }
  
 .galerie_displayed_images {
+    width: 100%;
     height: 586.781px;
     object-fit: cover;
     overflow: hidden;
     object-position: 100% 30%;
 }
 
-#petit_dej {
-    height: 586.781px;
-    object-fit: contain;
-    overflow: hidden;
-    align-self: center;
-    object-position: 50%;
-    margin-top: 5px;
-}
-
-/* Hide the images by default */
+/* Cacher les images par défault */
 .galerie_slides {
     display: none;  
-    background-color: #AC9D8F;
-    box-shadow: inset -1px 0 0 black, inset 1px 0 0 black, inset 0 1px 0 black;
 }
   
-/* Add a pointer when hovering over the thumbnail images */
+/* Changer de curseur quand on passe sur les images de la galerie */
 .cursor {
     cursor: pointer;
+    width: 100%;
 }
   
-/* Next & previous buttons */
+/* Boutons "suivant" et "précédent" */
 .prev,
 .next {
     cursor: pointer;
@@ -397,19 +283,19 @@ footer {
     -webkit-user-select: none;
 }
   
-/* Position the "next button" to the right */
+/* Placer le bouton "suivant" à droite */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
   
-/* On hover, add a black background color with a little bit see-through */
+/* Quand le curseur passe sur une image, rajouter une couleur de fond noire avec un peu de transparence */
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-  
-/* Number text (1/3 etc) */
+
+/* Nombre de l'image affichée (1/10 etc) */
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -418,7 +304,7 @@ footer {
     top: 0;
 }
   
-/* Container for image text */
+/* Conteneur du texte associé à chaque image */
 .caption-container {
     text-align: center;
     background-color: #222;
@@ -445,14 +331,15 @@ footer {
     clear: both;
 }
   
-/* Six columns side by side */
+/* 6 colones côte à côte */
 .column {
     float: left;
     width: 20%;
 }
   
-/* Add a transparency effect for thumnbail images */
+/* Ajouter un effet de transparence sur les miniatures de la galerie */
 .demo {
+    width: 100%;
     opacity: 0.6;
     height: 117.344px; 
     object-fit: cover;
@@ -464,7 +351,7 @@ footer {
     opacity: 1;
 }
 
-/* Fin CSS galerie */
+/* Fin CSS galerie */  
 
 
 /* CSS activites */
