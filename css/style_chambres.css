@@ -19,8 +19,6 @@ body {
 	  }
 	
 	
-	html
-	
 	* { box-sizing: border-box; }
 	
 	.wrapper {
@@ -123,8 +121,6 @@ body {
 	}
 	
 	@media (max-width: 768px) {
-
-
 	
 		.banner {
 			height: 20rem;
