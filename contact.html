@@ -1,153 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Deux Tours</title>
-    <link href="css/style_chambres.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style_chambres.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="scripts.js"></script>
-    <link href="css/style_contact.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style_acceuil.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style_contact.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_acceuil.css" rel="stylesheet" type="text/css" />
     <script>
-      function validateForm()                                    
-{ 
-    var prénom = document.forms["formulaire"]["prénom"];  
-    var nom = document.forms["formulaire"]["nom"];             
-    var email = document.forms["formulaire"]["email"];    
-    var téléphone = document.forms["formulaire"]["téléphone"]; 
-    var objet = document.forms["formulaire"]["objet"];  
-    var message = document.forms["formulaire"]["message"];  
-   
-    if (prénom.value == "")                                  
-    { 
-        document.getElementById('errorprénom').innerHTML="Veuillez entrer un nom valide";  
-        name.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errorprénom').innerHTML="";  
-    }
-
-    if (nom.value == "")                                  
-    { 
-        document.getElementById('errornom').innerHTML="Veuillez entrer un nom valide";  
-        name.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errornom').innerHTML="";  
-    }
-
-
-    if (email.value.indexOf("@", 0) < 0)                 
-    { 
-        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
-        email.focus(); 
-        return false; 
-    } 
-
-    if (téléphone.value == "")                                  
-    { 
-        document.getElementById('errortél').innerHTML="Veuillez entrer un numéro de téléphone valide";  
-        name.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errortél').innerHTML="";  
-    }
-
-    if (message.value == "")                           
-    {
-        document.getElementById('errormessage').innerHTML="Veuillez entrez un message valide"; 
-        message.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errormessage').innerHTML="";  
-    }
-   
-    return true; 
-}
     </script>
 </head>
-   <body>
-        <!-- Haut de page -->
-        <header class="header">
-            <div class="wrapper">
-                <div class="header_logo">
-                    <a href="" class="header_logo_link">Les deux tours </a>
-                </div>
 
-                <div class="header_usermenu_responsive-icon">
-                    <i class="burger_menu"></i>
-                </div>
-
-                <div class="header_usermenu">
-                    <li class="header_usermenu_item">
-                        <a href="index.html" class="header_usermenu_item_link">Accueil</a>
-                    </li>
-
-                    <li class="header_usermenu_item">
-                        <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
-                    </li>
-
-                    <li class="header_usermenu_item">
-                        <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
-                    </li>
-
-                    <li class="header_usermenu_item">
-                        <a href="#!" class="header_usermenu_item_link">à propos</a>
-                    </li>
-                </div>
+<body>
+    <!-- Haut de page -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header_logo">
+                <a href="" class="header_logo_link">Les deux tours </a>
             </div>
-        </header>
-        <div class="banner">
-            <span class="background"></span>
+
+            <div class="header_usermenu_responsive-icon">
+                <i class="burger_menu"></i>
+            </div>
+
+            <div class="header_usermenu">
+                <li class="header_usermenu_item">
+                    <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+                </li>
+
+                <li class="header_usermenu_item">
+                    <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+                </li>
+
+                <li class="header_usermenu_item">
+                    <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+                </li>
+
+                <li class="header_usermenu_item">
+                    <a href="#!" class="header_usermenu_item_link">à propos</a>
+                </li>
+            </div>
         </div>
-         <!-- Fin haut de page -->
+    </header>
+    <div class="banner">
+        <span class="background"></span>
+    </div>
+    <!-- Fin haut de page -->
 
-      <h1 id="p0">Vous avez une demande particulière ?</h1>
-      <hr>
-      <!--<p id="p1">Ou simplement une question ?</p>
-      <hr>
-      <p id="p2">Contactez nous</p>
-      <hr>-->
-        <div class="container">
-          <p id="titreform">Formulaire</p>
-            <form name="formulaire" method="GET"> <!--onsubmit="return validateForm()"-->
+    <!--Petit titre pour le site-->
+    <h1 id="p0">Vous avez une demande particulière ?</h1>
+    <hr>
+    <!--Formulaire de contact-->
+    <div class="container">
+        <p id="titleform">Formulaire</p>
+        <form name="formulaire" method="GET">
 
+            <!--Champ de saisi Prénom-->
+            <label for="prénom"></label>
+            <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
 
-              <label for="prénom"></label>
-              <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
-              <span class="error" id="errorprénom"></span>
-          
-              <label for="nom"></label>
-              <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
-              <span class="error" id="errornom"></span>
+            <!--Champ de saisi Nom-->
+            <label for="nom"></label>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
 
-              <label for="email"></label>
-              <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail" required>
-              <span class="error" id="errormail"></span>
+            <!--Champ de saisi email-->
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail" required>
 
-              <label for="téléphone"></label>
-              <input type="tel" id="téléphone" name="téléphone" placeholder="Entrez votre numéro de téléphone" pattern="[0-9 + ()]*" required>
-              <span class="error" id="errortél"></span>
-          
-          
-              <label for="objet"></label>
-              <select id="objet" name="objet" required>
+            <!--Champ de saisi téléphone-->
+            <label for="phone"></label>
+            <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" pattern="[0-9 + ()]*" required>
+
+            <!--Liste déroulante pour la sélection d'objet-->
+            <label for="objet"></label>
+            <select id="objet" name="objet" required>
                 <option value="">Entrez l'objet de votre demande</option>
                 <option value="réservation">Réservation</option>
                 <option value="demande d'informations">Demande d'informations</option>
                 <option value="demande d'emploi">Demande d'emploi</option>
                 <option value="autre demande">Autre demande</option>
               </select>
-          
-              <label for="message"></label>
-              <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:85%" rows="5" required></textarea>
-              <span class="error" id="errormessage"></span>
-          
-              <input type="submit" id="bouton" value="Envoyer">
-          
-            </form>
-          </div>
+            <!--Champ de saisi message-->
+            <label for="message"></label>
+            <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:85%" rows="5" required></textarea>
+            <!--Bouton d'envoi-->
+            <input type="submit" id="bouton" value="Envoyer">
+
+        </form>
+    </div>
     <!-- Pied de Page -->
     <footer class="nav-footer">
         <div class="footer-container">
@@ -167,14 +110,12 @@
             <!-- Contact Commanditaire -->
             <div class="footer-contact-2">
                 <ul class="footer-contact">
-                    <li id="footer-list-item-1" class="footer-list"><img class="footer_images"
-                            src="Images/footer/logo_mail.png" alt="logo_mail"><a id="footer-link"
-                            href="mailto:d.raso@intech-sud.fr"> vincent.couroyer@club-internet.fr </a></li>
-                    <li id="footer-list-item-2" class="footer-list"><img class="footer_images"
-                            src="Images/footer/logo_appel.png" alt="logo_appel">04 66 24 18 96</li>
+                    <li id="footer-list-item-1" class="footer-list"><img class="footer_images" src="Images/footer/logo_mail.png" alt="logo_mail"><a id="footer-link" href="mailto:d.raso@intech-sud.fr"> vincent.couroyer@club-internet.fr </a></li>
+                    <li id="footer-list-item-2" class="footer-list"><img class="footer_images" src="Images/footer/logo_appel.png" alt="logo_appel">04 66 24 18 96</li>
                 </ul>
             </div>
         </div>
     </footer>
-   </body>
+</body>
+
 </html>

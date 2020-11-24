@@ -1,60 +1,65 @@
+/*Style du titre de la page*/
 
 #p0 {
     text-align: center;
     font-size: 2.5em;
-  }
-#p1 {
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-#p2 {
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
+}
 
-  #titreform {
+
+/*Style du titre du formulaire*/
+
+#titleform {
     text-align: center;
     font-weight: bold;
     text-decoration: underline black
-  }
+}
+
 
 /* Style de plusieurs éléments qui sont notés dans la 1ère ligne */
-input[type=text], select, #message, #email, #téléphone {
+
+input[type=text],
+select,
+#message,
+#email,
+#phone {
     flex-direction: column;
     justify-content: center;
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
 
-  /* Style du bouton "envoyer" */
-  input[type=submit] {
+
+/* Style du bouton "envoyer" */
+
+input[type=submit] {
     background-color: #a07556;
     display: block;
     margin: auto;
     color: white;
+    align-content: center;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  /* Quand on bouge la souris sur le bouton, change la couleur */
-  input[type=submit]:hover {
+}
+
+
+/* Quand on bouge la souris sur le bouton, change la couleur */
+
+input[type=submit]:hover {
     background-color: #836853;
-  }
-  
-  /* Add a background color and some padding around the form */
-  .container {
+}
+
+
+/*Couleur de fond + padding autour du formulaire*/
+
+.container {
     border-radius: 5px;
     background-color: #f1f1f1;
     padding-left: 30%;
@@ -62,30 +67,26 @@ input[type=text], select, #message, #email, #téléphone {
     padding-top: 5%;
     padding-bottom: 5%;
     border-bottom: solid 5px rgb(197, 184, 184);
-  }
+}
 
-  /* Style des barres de séparation*/
-  hr{
+
+/* Style des barres de séparation*/
+
+hr {
     border: none;
-    border-top: double 4px rgb(197, 184, 184);;
+    border-top: double 4px rgb(197, 184, 184);
+    ;
     color: #333;
     overflow: visible;
     text-align: center;
     height: 5px;
     width: 50%;
     padding-bottom: 10px;
-  }
-  
-  /* Style de l'encadré message */
-  #message{
-      font-family: Arial;
-  }
+}
 
-  #submit{
-      align-content: center;
-  }
 
-  .error{
-    color: #D8000C;
-    background-color: #FFBABA;
-  }
+/* Style de l'encadré message */
+
+#message {
+    font-family: Arial;
+}
