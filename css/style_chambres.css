@@ -1,11 +1,18 @@
+
 body {
-	margin:0;
+		margin:0;
 		padding:0;
 		background:rgb(250, 250, 250);
+		box-sizing: border-box;
+		width: 100%;
 	}
 
 	h2 {
 		text-align: center;
+	}
+
+	.li_infos {
+		line-height: 2;
 	}
 
 	.text__muted {
@@ -19,7 +26,6 @@ body {
 	  }
 	
 	
-	* { box-sizing: border-box; }
 	
 	.wrapper {
 		width: 90%;
@@ -120,7 +126,7 @@ body {
 	  margin-right: 35px;
 	}
 	
-	@media (max-width: 768px) {
+	@media (max-width: 780px) {
 	
 		.banner {
 			height: 20rem;
@@ -201,6 +207,7 @@ body {
 	body.loaded {
 	  opacity: 1;
 	  transition: 1s opacity;
+	  box-sizing: border-box;
 	}
 	
 	
@@ -212,6 +219,7 @@ body {
 	  overflow: hidden;
 	  backface-visibility: hidden;
 	  border-bottom: solid 5px rgb(197, 184, 184);
+	  box-sizing: border-box;
 	}
 	
 	
@@ -293,11 +301,9 @@ body {
 	
 	.modal_description {
 		position: fixed; 
-		z-index: 1; 
-		padding-top: 100px; 
+		z-index: 1;  
 		top: 0;
 		width: 100%;
-		height: 100%; 
 		display: flex;
 		justify-content: center;
 	}
@@ -383,23 +389,11 @@ body {
 		line-height: 25px;
 	}
 
-	.site-footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.container-footer {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-around;
-	}
+	
 
 	dialog {
 	width: 100%;
-    height: 100%;
+	border: none;
    
 	}
 

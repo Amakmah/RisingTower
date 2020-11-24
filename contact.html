@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="scripts.js"></script>
     <link href="css/style_contact.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style_acceuil.css" rel="stylesheet" type="text/css"/>
     <script>
       function validateForm()                                    
 { 
@@ -147,8 +148,33 @@
           
             </form>
           </div>
-      <footer>
+    <!-- Pied de Page -->
+    <footer class="nav-footer">
+        <div class="footer-container">
+            <!-- Logo cliquable -->
+            <div class="header_logo">
+                <a href="" class="header_logo_link">Les deux tours </a>
+            </div>
 
-      </footer>
+
+            <div class="footer-map">
+                <!-- Insertion de la carte dans le footer -->
+                <div id="footer-map-div">
+                    <div id="footer-map-body"></div>
+
+                </div>
+            </div>
+            <!-- Contact Commanditaire -->
+            <div class="footer-contact-2">
+                <ul class="footer-contact">
+                    <li id="footer-list-item-1" class="footer-list"><img class="footer_images"
+                            src="Images/footer/logo_mail.png" alt="logo_mail"><a id="footer-link"
+                            href="mailto:d.raso@intech-sud.fr"> vincent.couroyer@club-internet.fr </a></li>
+                    <li id="footer-list-item-2" class="footer-list"><img class="footer_images"
+                            src="Images/footer/logo_appel.png" alt="logo_appel">04 66 24 18 96</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
    </body>
 </html>
