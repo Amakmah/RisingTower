@@ -114,38 +114,35 @@ body {
 	
 /*Design Bannière*/
 	
-.banner {
-	position: relative;
-	width: 100%;
-	height: 40rem;
-	padding: 0 5%;
-	overflow: hidden;
-	backface-visibility: hidden;
-	border-bottom: solid 5px rgb(197, 184, 184);
-	box-sizing: border-box;
-}
+    
+body.loaded { 
+    opacity: 1; 
+    transition: 1s opacity; 
+} 
 
-body .background_banner {
+  .banner { 
+    position: relative;  
+	height: 40rem; 
+	width: 100%; 
+    overflow: hidden; 
+} 
 
-	transform: scale(1);
-	transition: 6.5s transform;
+  .banner .background_banner { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    z-index: -1; 
+    transform:  scale(1.1); 
+    background:  url(https://cf.bstatic.com/images/hotel/max1280x900/174/174790597.jpg) no-repeat;  
+    background-size: cover; 
+    background-position: 20% 50%; 
+} 
 
-}
-	
-.banner .background_banner {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
-	transform: translate3d(0,0,0) scale(1.25);
-	background: black url(https://cf.bstatic.com/images/hotel/max1280x900/174/174790597.jpg) no-repeat  ; 
-	background-size: cover;
-	background-position: 50% 50%;
-	transform: scale(1);
-	transition: 6.5s transform;
-}
+  /* une fois la page chargé */ 
+  .loaded .banner .background_banner { 
+    transform: scale(1.3); 
+    transition: 9s transform; 
+} 
 
 /*Design cards des chambres*/
 
