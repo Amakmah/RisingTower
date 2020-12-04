@@ -133,14 +133,14 @@ body.loaded {
     position: absolute; 
     z-index: -1; 
     transform:  scale(1.1); 
-    background:  url(https://cf.bstatic.com/images/hotel/max1280x900/174/174790597.jpg) no-repeat;  
+    background:  url(https://media-cdn.tripadvisor.com/media/photo-m/1280/13/d0/68/40/les-deux-tours.jpg) no-repeat;  
     background-size: cover; 
-    background-position: 20% 50%; 
+    background-position: 20% 10%; 
 } 
 
   /* une fois la page chargé */ 
   .loaded .banner .background_banner { 
-    transform: scale(1.3); 
+    transform: scale(1.2); 
     transition: 9s transform; 
 } 
 
