@@ -1,0 +1,56 @@
+{
+    "images": [
+        {
+            "page_accueil": [
+                {
+                    "gallerie": {
+                        "image_gallerie_1": "devanture_1.jpg",
+                        "image_gallerie_2": "jardin_devanture.jpg",
+                        "image_gallerie_3": "marre_jardin.jpg",
+                        "image_gallerie_4": "porte.jpg",
+                        "image_gallerie_5": "terrasse.jpg",
+                        "image_gallerie_6": "piscine.jpg",
+                        "image_gallerie_7": "spa.jpg",
+                        "image_gallerie_8": "jardin.png",
+                        "image_gallerie_9": "deco_couloir.png",
+                        "image_gallerie_10": "devanture_nuit.jpg"
+                    }
+                },
+                {
+                    "activites": {
+                        "image_activite_1": "hiking.jpg"
+                    }
+                },
+                {
+                    "footer": {
+                        "image_footer_1": "logo_mail.png",
+                        "image_footer_2": "logo_appel.png"
+                    }
+                }
+            ]
+        },
+        {
+            "page_chambres": [
+                {
+                    "Josephine": {
+                        "image_chambre_Josephine_1": "Josephine_1.jpg",
+                        "image_chambre_Josephine_2": "Josephine_2.jpg",
+                        "image_chambre_Josephine_3": "Josephine_3.jpg"
+                    }
+                },
+                {
+                    "Hortense": {
+                        "image_chambre_Hortense_1": "Hortense_1.jpg",
+                        "image_chambre_Hortense_2": "Hortense_2.jpg"
+                    }
+                },
+                {
+                    "Heloise": {
+                        "image_chambre_Heloise_1": "Heloise_1.jpg",
+                        "image_chambre_Heloise_2": "Heloise_2.jpg"
+                    }
+                }
+            ]
+        }
+    ]
+}
