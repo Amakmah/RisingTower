@@ -3,17 +3,17 @@
         {
             "page_accueil": [
                 {
-                    "gallerie": {
-                        "image_gallerie_1": "devanture_1.jpg",
-                        "image_gallerie_2": "jardin_devanture.jpg",
-                        "image_gallerie_3": "marre_jardin.jpg",
-                        "image_gallerie_4": "porte.jpg",
-                        "image_gallerie_5": "terrasse.jpg",
-                        "image_gallerie_6": "piscine.jpg",
-                        "image_gallerie_7": "spa.jpg",
-                        "image_gallerie_8": "jardin.png",
-                        "image_gallerie_9": "deco_couloir.png",
-                        "image_gallerie_10": "devanture_nuit.jpg"
+                    "galerie": {
+                        "image_galerie_1": "devanture_1.jpg",
+                        "image_galerie_2": "jardin_devanture.jpg",
+                        "image_galerie_3": "marre_jardin.jpg",
+                        "image_galerie_4": "porte.jpg",
+                        "image_galerie_5": "terrasse.jpg",
+                        "image_galerie_6": "piscine.jpg",
+                        "image_galerie_7": "spa.jpg",
+                        "image_galerie_8": "jardin.png",
+                        "image_galerie_9": "deco_couloir.png",
+                        "image_galerie_10": "devanture_nuit.jpg"
                     }
                 },
                 {
