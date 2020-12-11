@@ -10,8 +10,6 @@
     <script src="scripts.js"></script>
     <link href="css/style_contact.css" rel="stylesheet" type="text/css" />
     <link href="css/style_acceuil.css" rel="stylesheet" type="text/css" />
-    <script>
-    </script>
 </head>
 
 <body>
@@ -58,7 +56,7 @@
     <!--Formulaire de contact-->
     <div class="container">
         <p id="titleform">Formulaire</p>
-        <form name="formulaire" method="GET">
+        <form name="formulaire" method="GET" action="javascript:EnvoiMail()">
 
             <!--Champ de saisi Prénom-->
             <label for="prénom"></label>
@@ -74,7 +72,7 @@
 
             <!--Champ de saisi téléphone-->
             <label for="phone"></label>
-            <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" pattern="[0-9 + ()]*" required>
+            <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" pattern="[0-9 + ()]{10,}" required>
 
             <!--Liste déroulante pour la sélection d'objet-->
             <label for="objet"></label>
