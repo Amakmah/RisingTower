@@ -1,23 +1,16 @@
 const HTTP = require('http');
 const FS = require("fs");
-const mesFonctions = require("./sendImages")
+const mesFonctions = require("./sendImages");
+const { transcode } = require('buffer');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
+var transfert_images = 0
+
 const server = HTTP.createServer((req, res) => {
     console.log("nouvelle requete! ip: " + req.connection.remoteAddress);
 
-    for (let i = 0; i < mesFonctions.mesImages.length; i++) {
-        var path_2 = "./" + mesFonctions.mesImages[i];
-        var path_1 = req.url;
-        path_1 = path_1.slice(path_1.length - path_2.length + 1 , path_1.length);
-        path_1 = "." + path_1;
-        var path_3 = req.url;
-    }
-    console.log(path_1)
-    console.log(path_2)
-    console.log(req.url)
 
     if (req.url == '/') {
         res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -64,10 +57,24 @@ const server = HTTP.createServer((req, res) => {
         let jsFile = FS.readFileSync('./public/scripts/scripts.js');
         res.end(jsFile);
     }
-    else if (path_1 == path_2) {
-        const image = FS.readFileSync(path_3);
-        res.writeHead(200, { 'Content-Type': 'image/img' });
-        res.end(image);
+    else if (transfert_images == 0) {
+        for (let i = 0; i < mesFonctions.mesImages.length; i++) {
+            let path_1 = req.url
+            let path_2 = "./" + mesFonctions.mesImages[i];
+            path_1 = path_1.slice(path_1.length - path_2.length + 1 , path_1.length)
+            path_1 = "." + path_1
+            var path_3 = "./public"
+            path_3 += req.url
+            
+            if (path_1 == path_2) {
+                const image = FS.readFileSync(path_3);
+                console.log(image)
+
+                res.writeHead(200, { 'Content-Type': 'image/img' });
+                res.end(image);
+            }
+        }
+        transfert_images = 1
     }
     else if (req.url == 'public/') {
         res.writeHead(404, { 'Content-Type': 'text/html'})
