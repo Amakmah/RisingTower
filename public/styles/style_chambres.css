@@ -54,6 +54,11 @@ body {
 	height: 100%;
 	align-items: center;
 }
+
+#header_usermenu_list {
+	display: flex;
+	margin: 0px;
+}
 	
 .header_usermenu_item {
 	display: flex;
@@ -144,6 +149,128 @@ body.loaded {
     transition: 9s transform; 
 } 
 
+/* Code CSS pied de page */
+
+footer {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-evenly;
+	background:rgb(250, 250, 250);
+	
+    padding: 5px;
+    
+}
+
+.nav-footer {
+    width: 100%;
+    height: 260px;
+    padding: 0px;
+}
+
+/* Partie footer des pages en CSS */
+
+.footer-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 30px;
+    
+}
+
+.footer-map {
+
+    width: 300px;
+
+}
+
+/* Partie logo du footer en CSS */
+
+.footer-logo {
+    flex-grow: 0.5;
+}
+
+/* Fin de la partie logo en CSS */
+
+
+/* Partie map du footer en CSS */
+
+.footer-map {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 120px;
+}
+
+#footer-map-div {
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid black;
+}
+
+/* Fin de la partie map en CSS */
+
+
+/* Partie contact du footer en CSS */
+
+.footer-contact-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.footer-contact {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 80px;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+#footer-list-item-1 {
+    padding-bottom: 8px;
+}
+
+#footer-list-item-2 {
+    padding-top: 8px;
+}
+
+.footer_images {
+    width: 30px;
+    padding-right: 15px;
+}
+
+#footer-link {
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    padding: 0px;
+    max-width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0;
+    border: black solid 0px;
+    font-size: 1em;
+}
+/* Fin de la partie contact en CSS */
+/* Fin de la partie footer des pages en CSS */
+
 /*Design cards des chambres*/
 
 .container_cards {
@@ -151,6 +278,7 @@ body.loaded {
 	align-items: center;
 	flex-direction: column;
 	padding-top: 100px;
+	border-bottom: solid 5px rgb(197, 184, 184);
 }
 	
 .main_chambres {
@@ -165,7 +293,7 @@ body.loaded {
 	box-shadow: 4px 7px 6px 4px rgb(202, 183, 183);
 	width: 55%;
 	height: 80%;
-	margin: 40;
+	margin: 40px;
 }
 
 .main_chambres .text_card {
@@ -289,8 +417,16 @@ body.loaded {
 	border: none;   
 }
 
-.h2_modal {
+#h2_Josephine {
 	padding-left: 560px;
+}
+
+#h2_Hortense {
+	padding-left: 430px;
+}
+
+#h2_Heloise {
+	padding-left: 490px;
 }
 
 .button_close_modal {
@@ -384,4 +520,3 @@ body.loaded {
 		height: 20rem;
 	}
 }
-	

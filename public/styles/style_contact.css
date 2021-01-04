@@ -1,91 +1,375 @@
-        /*Style du titre de la page*/
-        
-        #p0 {
-            text-align: center;
-            font-size: 2.5em;
-        }
-        /*Style du titre du formulaire*/
-        
-        #titleform {
-            text-align: center;
-            font-weight: bold;
-            text-decoration: underline black
-        }
-        /* Style de plusieurs éléments qui sont notés dans la 1ère ligne */
-        
-        input[type=text],
-        select,
-        #message,
-        #email,
-        #phone {
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-        /* Style du bouton "envoyer" */
-        
-        input[type=submit] {
-            background-color: #a07556;
-            display: block;
-            margin: auto;
-            color: white;
-            align-content: center;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        /* Quand on bouge la souris sur le bouton, change la couleur */
-        
-        input[type=submit]:hover {
-            background-color: #836853;
-        }
-        /*Couleur de fond + padding autour du formulaire*/
-        
-        .container {
-            border-radius: 5px;
-            background-color: #f1f1f1;
-            padding-left: 30%;
-            padding-right: 30%;
-            padding-top: 1%;
-            padding-bottom: 5%;
-            border-bottom: solid 5px rgb(197, 184, 184);
-        }
-        /* Style des barres de séparation*/
-        
-        hr {
-            border: none;
-            border-top: double 4px rgb(197, 184, 184);
-            color: #333;
-            overflow: visible;
-            text-align: center;
-            height: 5px;
-            width: 50%;
-            padding-bottom: 10px;
-        }
-        /* Style de l'encadré message */
-        
-        #message {
-            font-family: Arial;
-        }
-        /*Responsive pour mobile*/
-        
-        @media (max-width: 780px) {
-            /*les champs auront la largeur maximale*/
-            .container {
-                border-radius: 5px;
-                background-color: #f1f1f1;
-                padding-left: 0%;
-                padding-right: 0%;
-                padding-top: 1%;
-                padding-bottom: 5%;
-                border-bottom: solid 5px rgb(197, 184, 184);
-            }
-        }
+/*Design Header*/
+
+.header {
+	background:rgb(250, 250, 250);
+	display: flex;
+	flex-direction: row;
+	border-bottom: solid 5px rgb(197, 184, 184);
+}
+
+.header_nav {
+	width: 90%;
+	margin: 0 auto;
+}
+	
+.header .header_nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+	
+.header_title {
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+	
+.header_title h2 {
+	color: black;
+	font-family: 'Asap', sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 26px;
+	text-decoration: none;
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+	
+.header_usermenu {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+	height: 100%;
+	align-items: center;
+}
+
+#header_usermenu_list {
+	display: flex;
+	margin: 0px;
+}
+	
+.header_usermenu_item {
+	display: flex;
+	height: 80px;
+	justify-content: center;
+	align-items: center;
+}
+	
+.header_usermenu_item_link {
+	text-decoration: none;
+	color: black;
+	font-weight: 300;
+	font-size: 20px;
+	display: flex;
+	transition: .25s ease;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 0 30px;
+}
+	
+.header_usermenu_item_link:hover {
+	background: rgb(240, 240, 240);
+}
+	
+.header_usermenu_icon {
+	color: rgb(250, 250, 250);
+	font-size: 20px;
+	margin-right: 10px;
+}
+	
+.header_usermenu_responsive-icon {
+	height: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 26px;
+	color: #fff;
+	display: none;
+	flex-grow: 1;
+}
+	
+.header_usermenu_responsive-icon i {
+	height: 80%;
+	width: 70px;
+	text-align: center;
+	line-height: 80px;
+	cursor: pointer;
+	margin-right: 35px;
+}
+   
+/* Fin Design Header */
+
+
+/* Burger menu */
+
+.burger_menu {
+	cursor: pointer;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/768px-Ic_menu_48px.svg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Fin Burger menu */   
+
+
+/* Design Bannière */
+    
+body.loaded { 
+    opacity: 1; 
+    transition: 1s opacity; 
+} 
+
+  .banner { 
+    position: relative;  
+	height: 40rem; 
+	width: 100%; 
+    overflow: hidden; 
+} 
+
+    .banner .background_banner { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    z-index: -1; 
+    transform:  scale(1.1); 
+    background:  url(https://media-cdn.tripadvisor.com/media/photo-m/1280/13/d0/68/40/les-deux-tours.jpg) no-repeat;  
+    background-size: cover; 
+    background-position: 20% 10%; 
+} 
+
+  /* une fois la page chargé */ 
+    .loaded .banner .background_banner { 
+    transform: scale(1.2); 
+    transition: 9s transform; 
+} 
+
+/* Fin Design Bannière */
+
+/* Code CSS pied de page */
+
+footer {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-evenly;
+    background:rgb(250, 250, 250);
+
+    padding: 5px;
+    
+}
+
+.nav-footer {
+    width: 100%;
+    height: 260px;
+    padding: 0px;
+}
+
+/* Partie footer des pages en CSS */
+
+.footer-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 30px;
+    
+}
+
+.footer-map {
+
+    width: 300px;
+
+}
+
+/* Partie logo du footer en CSS */
+
+.footer-logo {
+    flex-grow: 0.5;
+}
+
+/* Fin de la partie logo en CSS */
+
+
+/* Partie map du footer en CSS */
+
+.footer-map {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 120px;
+}
+
+#footer-map-div {
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid black;
+}
+
+/* Fin de la partie map en CSS */
+
+
+/* Partie contact du footer en CSS */
+
+.footer-contact-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.footer-contact {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 80px;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+#footer-list-item-1 {
+    padding-bottom: 8px;
+}
+
+#footer-list-item-2 {
+    padding-top: 8px;
+}
+
+.footer_images {
+    width: 30px;
+    padding-right: 15px;
+}
+
+#footer-link {
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    padding: 0px;
+    max-width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0;
+    border: black solid 0px;
+    font-size: 1em;
+}
+/* Fin de la partie contact en CSS */
+/* Fin de la partie footer des pages en CSS */
+
+
+/* Style Corps de la page */
+
+body {
+    margin: 0px;
+}
+
+/*Style du titre de la page*/
+
+#p0 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/*Style du titre du formulaire*/
+
+#titleform {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline black
+}
+
+/* Style de plusieurs éléments qui sont notés dans la 1ère ligne */
+
+input[type=text], select, #message, #email, #phone {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* Style du bouton "envoyer" */
+
+input[type=submit] {
+    background-color: #a07556;
+    display: block;
+    margin: auto;
+    color: white;
+    align-content: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Quand on bouge la souris sur le bouton, change la couleur */
+
+input[type=submit]:hover {
+    background-color: #836853;
+}
+
+/*Couleur de fond + padding autour du formulaire*/
+
+.container {
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    border-bottom: solid 5px rgb(197, 184, 184);
+}
+
+/* Style des barres de séparation*/
+
+hr {
+    border: none;
+    border-top: double 4px rgb(197, 184, 184);
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+/* Style de l'encadré message */
+
+#message {
+    font-family: Arial;
+}
+
+/*Responsive pour mobile*/
+
+@media (max-width: 780px) {
+    /*les champs auront la largeur maximale*/
+    .container {
+        border-radius: 5px;
+        background-color: #f1f1f1;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-top: 1%;
+        padding-bottom: 5%;
+        border-bottom: solid 5px rgb(197, 184, 184);
+    }
+}
