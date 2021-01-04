@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Deux Tours</title>
-    <link href="styles/style_chambres.css" rel="stylesheet" type="text/css"/>
-    <link href="styles/style_accueil.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/style_chambres.css" rel="stylesheet" type="text/css" />
+    <link href="styles/style_accueil.css" rel="stylesheet" type="text/css" />
     <script src="scripts/scripts.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
@@ -43,66 +45,73 @@
         </nav>
     </header>
     <!-- Fin haut de page -->
-    
 
-        <!-- Bannière image  -->
-            <div class="banner">
-                <span class="background_banner"></span>
-            </div>
-        <!-- Fin bannière image  -->
-            <main>
-                <div class="">
-                    <section class="content_accueil">
-                        <div class="div_accueil">
-                            <p class="p_accueil_description">Venez découvrir les DeuxTours situées dans le Gard entre Cévennes
-                                et Camargue, à deux pas de villes anciennes telles qu’Uzès, Nîmes, Anduze, Lussan. Aurélie et
-                                Vincent vous accueillent dans leur demeure du XVIIIème siècle. L’architecture des lieux allie
-                                charme et authenticité, avec ses balustres et sculptures en pierre. Passionnés d’histoire et
-                                d’architecture, nous pourrons vous faire découvrir la taille de pierre réalisée sur place par
-                                votre hôte. </p>
-                            <button class="button_accueil_chambres" type="button" value="Continuer"
-                                onClick="javascript:document.location.href='chambres.html'">Nos chambres</button>
-                        </div>
 
-                        <!-- Insertion d'une vidéo -->
-                        <div class="div_video">
-                            <iframe id="main_video" width="560" height="315" src="https://www.youtube.com/embed/CJn3PTWBWuU"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                        <!-- Insertion d'une vidéo -->
-                    </section>
+    <!-- Bannière image  -->
+    <div class="banner">
+        <span class="background_banner"></span>
+    </div>
+    <!-- Fin bannière image  -->
+    <main>
         <div class="">
+            <section class="content_accueil">
+                <div class="div_accueil">
+                    <p class="p_accueil_description">Venez découvrir les DeuxTours situées dans le Gard entre Cévennes
+                        et Camargue, à deux pas de villes anciennes telles qu’Uzès, Nîmes, Anduze, Lussan. Aurélie et
+                        Vincent vous accueillent dans leur demeure du XVIIIème siècle. L’architecture des lieux allie
+                        charme et authenticité, avec ses balustres et sculptures en pierre. Passionnés d’histoire et
+                        d’architecture, nous pourrons vous faire découvrir la taille de pierre réalisée sur place par
+                        votre hôte. </p>
+                    <button class="button_accueil_chambres" type="button" value="Continuer"
+                        onClick="javascript:document.location.href='chambres.html'">Nos chambres</button>
+                </div>
+
+                <!-- Insertion d'une vidéo -->
+                <div class="div_video">
+                    <iframe id="main_video" width="560" height="315" src="https://www.youtube.com/embed/CJn3PTWBWuU"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- Fin insertion d'une vidéo -->
+            </section>
+            <!-- Partie Galerie d'images -->
             <section class="content_galerie">
                 <div class="div_galerie">
+                    <!-- Placer toutes les images en grand (puis les cacher en CSS l-260, et les afficher en fonction des événements en JS) -->
                     <div class="galerie_slides">
                         <div class="numbertext">1 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/devanture_1.jpg" alt="Devanture">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/devanture_1.jpg"
+                            alt="Devanture">
                     </div>
 
                     <div class="galerie_slides">
                         <div class="numbertext">2 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/jardin_devanture.jpg" alt="Jardin de la devanture">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/jardin_devanture.jpg"
+                            alt="Jardin de la devanture">
                     </div>
 
                     <div class="galerie_slides">
                         <div class="numbertext">3 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/marre_jardin.jpg" alt="Marre du jardin">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/marre_jardin.jpg"
+                            alt="Marre du jardin">
                     </div>
 
                     <div class="galerie_slides">
                         <div class="numbertext">4 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/porte.jpg" alt="Porte d'entrée">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/porte.jpg"
+                            alt="Porte d'entrée">
                     </div>
 
                     <div class="galerie_slides">
                         <div class="numbertext">5 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/terrasse.jpg" alt="Terrasse">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/terrasse.jpg"
+                            alt="Terrasse">
                     </div>
 
                     <div class="galerie_slides">
                         <div class="numbertext">6 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/piscine.jpg" alt="Piscine">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/piscine.jpg"
+                            alt="Piscine">
                     </div>
 
                     <div class="galerie_slides">
@@ -117,12 +126,14 @@
 
                     <div class="galerie_slides">
                         <div class="numbertext">9 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/deco_couloir.png" alt="Décoration du couloir intérieur">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/deco_couloir.png"
+                            alt="Décoration du couloir intérieur">
                     </div>
 
                     <div class="galerie_slides">
                         <div class="numbertext">10 / 10</div>
-                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/devanture_nuit.jpg" alt="Devanture de nuit">
+                        <img class="galerie_displayed_images" src="Images/page_acceuil/galerie/devanture_nuit.jpg"
+                            alt="Devanture de nuit">
                     </div>
 
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -133,77 +144,91 @@
                     </div>
 
                     <div class="thumbnails">
+                        <!-- div de la première ligne des mignatures de la galerie -->
                         <div class=galerie_first_line>
+                            <!-- Placer le premier groupe de mignatures en ligne -->
                             <div class="row">
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/devanture_1.jpg"
-                                        onclick="currentSlide(1)" alt="Devanture">
+                                        onclick="currentSlide(1)" alt="Devanture">                                      <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/jardin_devanture.jpg"
-                                        onclick="currentSlide(2)" alt="Jardin de la devanture">
+                                        onclick="currentSlide(2)" alt="Jardin de la devanture">                         <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/marre_jardin.jpg"
-                                        onclick="currentSlide(3)" alt="Marre du jardin">
+                                        onclick="currentSlide(3)" alt="Marre du jardin">                                <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/porte.jpg"
-                                        onclick="currentSlide(4)" alt="Porte d'entrée">
+                                        onclick="currentSlide(4)" alt="Porte d'entrée">                                 <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/terrasse.jpg"
-                                        onclick="currentSlide(5)" alt="Terrasse">
+                                        onclick="currentSlide(5)" alt="Terrasse">                                       <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                             </div>
                         </div>
+                        <!-- div de la seconde ligne des mignatures de la galerie -->
                         <div class="galerie_second_line">
+                            <!-- Placer le premier groupe de mignatures en ligne -->
                             <div class="row">
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/piscine.jpg"
-                                        onclick="currentSlide(6)" alt="Piscine">
+                                        onclick="currentSlide(6)" alt="Piscine">                                        <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/spa.jpg"
-                                        onclick="currentSlide(7)" alt="Spa">
+                                        onclick="currentSlide(7)" alt="Spa">                                            <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/jardin.png"
-                                        onclick="currentSlide(8)" alt="Jardin">
+                                        onclick="currentSlide(8)" alt="Jardin">                                         <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/deco_couloir.png"
-                                        onclick="currentSlide(9)" alt="Décoration du couloir intérieur">
+                                        onclick="currentSlide(9)" alt="Décoration du couloir intérieur">                <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/devanture_nuit.jpg"
-                                        onclick="currentSlide(10)" alt="Devanture de nuit">
+                                        onclick="currentSlide(10)" alt="Devanture de nuit">                             <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
-        <section class="content_activites">
-            <div class="div_activites">
-                <div class="image_activites">
-                    <img id="activites_image" src="Images/hiking.jpg" alt="image">
-                </div>
-                <div class="text_activites">
-                    <div class="titre_description_activites">
-                        <h3 class="p_text_activites">Activités</h3>
-                        <p class="p_text_activites">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi odit
-                            rerum, necessitatibus exercitationem nulla iste? Harum consectetur omnis sapiente nam
-                            quibusdam cumque dolores maiores vel, amet, minus inventore, libero exercitationem.
-                        </p>
+            <section class="content_activites">
+                <div class="div_activites">
+                    <div class="image_activites">
+                        <img id="activites_image" src="Images/hiking.jpg" alt="image">
                     </div>
-                    <div class="carte_activites">
+                    <div class="text_activites">
+                        <div class="titre_description_activites">
+                            <h3 class="p_text_activites">Activités</h3>
+                            <p class="p_text_activites">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                                odit
+                                rerum, necessitatibus exercitationem nulla iste? Harum consectetur omnis sapiente nam
+                                quibusdam cumque dolores maiores vel, amet, minus inventore, libero exercitationem.
+                            </p>
+                        </div>
+                        <div class="carte_activites">
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
     </main>
 
     <!-- Pied de Page -->

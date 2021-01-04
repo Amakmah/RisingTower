@@ -8,14 +8,12 @@ var images_URLs = []
 
 function readImagesFile() {
 
-    //lire le fichier externe
+    //lire le fichier JSON externe
     let monJson = FS.readFileSync(__dirname + '/images.json');
 
     //interpreter le contenu du fichier comme du json
     let monJsonDecoded = JSON.parse(monJson);
     displayImages(monJsonDecoded)
-
-    return monJsonDecoded;
 }
 
 function displayImages(json_file) {
