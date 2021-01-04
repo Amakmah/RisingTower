@@ -10,14 +10,27 @@ var transfert_images = 0
 
 const server = HTTP.createServer((req, res) => {
     console.log("nouvelle requete! ip: " + req.connection.remoteAddress);
+    console.log(req.url)
 
+    if (req.url != "/public/Images/footer/logo_mail.png" && req.url != '/public/Images/footer/logo_appel.png') {
+        for (let i = 0; i < mesFonctions.mesImages.length; i++) {
+            let path_2 = "./" + mesFonctions.mesImages[i]
+            let path_1 = req.url
+            path_1 = path_1.slice(path_1.length - path_2.length + 1, path_1.length)
+            path_1 = "." + path_1
+            var path_3 = "public"
+            path_3 += req.url
 
-    if (req.url == '/') {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        let accueil = FS.readFileSync('./public/index.html');
-        res.end(accueil);
+            if (path_1 == path_2) {
+                const image = FS.readFileSync(path_3);
+
+                res.writeHead(200, { 'Content-Type': 'image/img' });
+                res.end(image);
+            }
+        }
     }
-    else if (req.url == '/index.html') {
+
+    if (req.url == '/' || req.url == '/index.html') {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         let accueil = FS.readFileSync('./public/index.html');
         res.end(accueil);
@@ -47,9 +60,24 @@ const server = HTTP.createServer((req, res) => {
         let cssFile = FS.readFileSync('./public/styles/style_contact.css');
         res.end(cssFile);
     }
-    else if (req.url == '/style_page_404.css') {
+    else if (req.url == '/styles/style_page_404.css') {
         res.writeHead(200, { 'Content-Type': 'text/css' });
         let cssFile = FS.readFileSync('./public/styles/style_page_404.css');
+        res.end(cssFile);
+    }
+    else if (req.url == '/public/styles/style_page_404.css') {
+        res.writeHead(200, { 'Content-Type': 'text/css' });
+        let cssFile = FS.readFileSync('./public/styles/style_page_404.css');
+        res.end(cssFile);
+    }
+    else if (req.url == '/public/Images/footer/logo_mail.png') {
+        res.writeHead(200, { 'Content-Type': 'text/img' });
+        let cssFile = FS.readFileSync('./public/Images/footer/logo_mail.png');
+        res.end(cssFile);
+    }
+    else if (req.url == '/public/Images/footer/logo_appel.png') {
+        res.writeHead(200, { 'Content-Type': 'text/img' });
+        let cssFile = FS.readFileSync('./public/Images/footer/logo_appel.png');
         res.end(cssFile);
     }
     else if (req.url == '/scripts/scripts.js') {
@@ -57,34 +85,20 @@ const server = HTTP.createServer((req, res) => {
         let jsFile = FS.readFileSync('./public/scripts/scripts.js');
         res.end(jsFile);
     }
-    else if (transfert_images == 0) {
-        for (let i = 0; i < mesFonctions.mesImages.length; i++) {
-            let path_1 = req.url
-            let path_2 = "./" + mesFonctions.mesImages[i];
-            path_1 = path_1.slice(path_1.length - path_2.length + 1 , path_1.length)
-            path_1 = "." + path_1
-            var path_3 = "./public"
-            path_3 += req.url
-            
-            if (path_1 == path_2) {
-                const image = FS.readFileSync(path_3);
-                console.log(image)
-
-                res.writeHead(200, { 'Content-Type': 'image/img' });
-                res.end(image);
-            }
-        }
-        transfert_images = 1
+    else if (req.url == '/public/scripts/scripts.js') {
+        res.writeHead(200, { 'Content-Type': 'text/js' });
+        let jsFile = FS.readFileSync('./public/scripts/scripts.js');
+        res.end(jsFile);
     }
-    else if (req.url == 'public/') {
-        res.writeHead(404, { 'Content-Type': 'text/html'})
+    else if (req.url == '/public/') {
+        res.writeHead(200, { 'Content-Type': 'text/html' })
         let error_404 = FS.readFileSync('./public/page_404.html');
         res.end(error_404);
     }
     else {
-    res.writeHead(404, { 'Content-Type': 'text/html' });
-    let error_404 = FS.readFileSync('./public/page_404.html');
-    res.end(error_404);
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        let error_404 = FS.readFileSync('./public/page_404.html');
+        res.end(error_404);
     }
 });
 

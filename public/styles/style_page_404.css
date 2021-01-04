@@ -104,6 +104,29 @@
 	background-size: cover;
 }
 
+/* Corps de la page 404 */
+
+body {
+    margin: 0;
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15.5vh;
+    margin-bottom: 35.6vh;
+}
+
+.texts_container {
+    display: flex;
+    align-items: center;
+}
+
+.texts_404 {
+    align-self: center;
+    text-align: center;
+    font-family: Helvetica ;
+}
 
 
 /* Code CSS pied de page */
@@ -127,30 +150,6 @@ footer {
     padding: 0px;
 }
 
-/* Corps de la page 404 */
-
-body {
-    margin: 0;
-}
-
-.main_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 15.5vh;
-    margin-bottom: 35.5vh;
-}
-
-.texts_container {
-    display: flex;
-    align-items: center;
-}
-
-.texts_404 {
-    align-self: center;
-    text-align: center;
-    width: 300vh;
-    font-family: Helvetica ;
-}
 
 
 /* Partie footer des pages en CSS */
@@ -320,3 +319,4 @@ body {
 		color: #666;
 		flex-grow: 1;
 	}
+}
