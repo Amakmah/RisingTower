@@ -51,22 +51,22 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("galerie_slides");     // créé une liste de tous les éléments de la classe "galerie_slides" (toutes les images censées être affichées en grand)
-    var dots = document.getElementsByClassName("demo");                 // créé une liste de tous les éléments de la classe "demo"           (toutes les images des mignatures)
-    var captionText = document.getElementById("caption");               // créé une varible captionText de l'élément dont l'ID est "caption" (le texte affiché au milieu de la galerie)
+    var slides = document.getElementsByClassName("galerie_slides"); // créé une liste de tous les éléments de la classe "galerie_slides" (toutes les images censées être affichées en grand)
+    var dots = document.getElementsByClassName("demo"); // créé une liste de tous les éléments de la classe "demo"           (toutes les images des mignatures)
+    var captionText = document.getElementById("caption"); // créé une varible captionText de l'élément dont l'ID est "caption" (le texte affiché au milieu de la galerie)
 
     // gestions des cas possibles
-    if (n > slides.length) { slideIndex = 1 }                           // si on dépasse de la longeur maximale de la liste on rétablit la valeur par défault slideIndex = 1 (on affiche la première image)
-    if (n < 1) { slideIndex = slides.length }                           // si on se retrouve en dessous de la longueur minimale de la liste on définit la valeur de l'index comme la valeur maximale (on affiche la dernière image)
-    for (i = 0; i < slides.length; i++) {                               // on parcourt la liste des images
-        slides[i].style.display = "none";                               // on défénit toutes les images comme cachées
+    if (n > slides.length) { slideIndex = 1 } // si on dépasse de la longeur maximale de la liste on rétablit la valeur par défault slideIndex = 1 (on affiche la première image)
+    if (n < 1) { slideIndex = slides.length } // si on se retrouve en dessous de la longueur minimale de la liste on définit la valeur de l'index comme la valeur maximale (on affiche la dernière image)
+    for (i = 0; i < slides.length; i++) { // on parcourt la liste des images
+        slides[i].style.display = "none"; // on défénit toutes les images comme cachées
     }
-    for (i = 0; i < dots.length; i++) {                                 // on parcourt la liste des mignatures
-        dots[i].className = dots[i].className.replace(" active", "");   // on enlève l'attribut "active" de l'image de la miniature qui était déja affichée
+    for (i = 0; i < dots.length; i++) { // on parcourt la liste des mignatures
+        dots[i].className = dots[i].className.replace(" active", ""); // on enlève l'attribut "active" de l'image de la miniature qui était déja affichée
     }
-    slides[slideIndex - 1].style.display = "block";                     // on affiche l'image souhaitée
-    dots[slideIndex - 1].className += " active";                        // on attribue l'attribut active à l'image de la miniature correspondante
-    captionText.innerHTML = dots[slideIndex - 1].alt;                   // on change la valeur du texte qui va avec l'image affichée (attribut "alt")
+    slides[slideIndex - 1].style.display = "block"; // on affiche l'image souhaitée
+    dots[slideIndex - 1].className += " active"; // on attribue l'attribut active à l'image de la miniature correspondante
+    captionText.innerHTML = dots[slideIndex - 1].alt; // on change la valeur du texte qui va avec l'image affichée (attribut "alt")
 }
 
 //Fonction de remplacement du bouton d'envoi de mail
