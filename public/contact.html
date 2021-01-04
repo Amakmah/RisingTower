@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Deux Tours</title>
-    <link href="styles/style_chambres.css" rel="stylesheet" type="text/css" />
+    <title>Nous contacter</title>
+    <link href="styles/style_contact.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="scripts/scripts.js"></script>
-    <link href="styles/style_contact.css" rel="stylesheet" type="text/css" />
-    <link href="styles/style_accueil.css" rel="stylesheet" type="text/css" />
-    <script>
-    </script>
 </head>
 
 <body>
@@ -27,30 +23,34 @@
             </div>
 
             <div class="header_usermenu">
-                <li class="header_usermenu_item">
-                    <a href="index.html" class="header_usermenu_item_link">Accueil</a>
-                </li>
+                <ul id="header_usermenu_list">
+                    <li class="header_usermenu_item">
+                        <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+                    </li>
 
-                <li class="header_usermenu_item">
-                    <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
-                </li>
+                    <li class="header_usermenu_item">
+                        <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+                    </li>
 
-                <li class="header_usermenu_item">
-                    <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
-                </li>
+                    <li class="header_usermenu_item">
+                        <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+                    </li>
 
-                <li class="header_usermenu_item">
-                    <a href="#!" class="header_usermenu_item_link">à propos</a>
-                </li>
+                    <li class="header_usermenu_item">
+                        <a href="#" class="header_usermenu_item_link">A propos</a>
+                    </li>
+                </ul>
             </div>
-            </div>
+        </nav>
     </header>
+    <!-- Fin haut de page -->
+
+
     <!-- Bannière image  -->
     <div class="banner">
         <span class="background_banner"></span>
     </div>
     <!-- Fin bannière image  -->
-    <!-- Fin haut de page -->
 
     <!--Petit titre pour le site-->
     <h1 id="p0">Vous avez une demande particulière ?</h1>
@@ -62,11 +62,13 @@
 
             <!--Champ de saisi Prénom-->
             <label for="prénom"></label>
-            <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
+            <input type="text" id="prénom" name="prénom" placeholder="Entrez votre Prénom"
+                pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
 
             <!--Champ de saisi Nom-->
             <label for="nom"></label>
-            <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom" pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre Nom"
+                pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required>
 
             <!--Champ de saisi email-->
             <label for="email"></label>
@@ -74,7 +76,8 @@
 
             <!--Champ de saisi téléphone-->
             <label for="phone"></label>
-            <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" pattern="[0-9 + ()]{10,}" required>
+            <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone"
+                pattern="[0-9 + ()]{10,}" required>
 
             <!--Liste déroulante pour la sélection d'objet-->
             <label for="objet"></label>
@@ -84,11 +87,12 @@
                 <option value="demande d'informations">Demande d'informations</option>
                 <option value="demande d'emploi">Demande d'emploi</option>
                 <option value="autre demande">Autre demande</option>
-              </select>
+            </select>
 
             <!--Champ de saisi message-->
             <label for="message"></label>
-            <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:85%" rows="5" required></textarea>
+            <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:85%" rows="5"
+                required></textarea>
 
             <!--Bouton d'envoi-->
             <input type="submit" id="bouton" value="Envoyer">
@@ -117,8 +121,11 @@
             <!-- Contact Commanditaire -->
             <div class="footer-contact-2">
                 <ul class="footer-contact">
-                    <li id="footer-list-item-1" class="footer-list"><img class="footer_images" src="Images/footer/logo_mail.png" alt="logo_mail"><a id="footer-link" href="mailto:d.raso@intech-sud.fr"> vincent.couroyer@club-internet.fr </a></li>
-                    <li id="footer-list-item-2" class="footer-list"><img class="footer_images" src="Images/footer/logo_appel.png" alt="logo_appel">04 66 24 18 96</li>
+                    <li id="footer-list-item-1" class="footer-list"><img class="footer_images"
+                            src="Images/footer/logo_mail.png" alt="logo_mail"><a id="footer-link"
+                            href="mailto:d.raso@intech-sud.fr"> vincent.couroyer@club-internet.fr </a></li>
+                    <li id="footer-list-item-2" class="footer-list"><img class="footer_images"
+                            src="Images/footer/logo_appel.png" alt="logo_appel">04 66 24 18 96</li>
                 </ul>
             </div>
         </div>

@@ -1,6 +1,5 @@
 const FS = require("fs");
-const path = require("path");
-var images_URLs = []
+var images_URLs = [];
 
 /**
  * renvoit un objet contenant le tableau images.
@@ -13,7 +12,7 @@ function readImagesFile() {
 
     //interpreter le contenu du fichier comme du json
     let monJsonDecoded = JSON.parse(monJson);
-    displayImages(monJsonDecoded)
+    displayImages(monJsonDecoded);
 }
 
 function displayImages(json_file) {
@@ -29,17 +28,17 @@ function displayImages(json_file) {
                 
                 for (var key_4 = 0, l4 = Object.values(Object.values(obj_3)[0]).length; key_4 < l4; key_4++) {
                     var obj_4 = Object.values(Object.values(obj_3)[0])[key_4];
-                    images_URLs.push(obj_4)
+                    images_URLs.push(obj_4);
                 }
 
             }
         }
     }
-    return images_URLs
+    return images_URLs;
 }
 
-readImagesFile()
-console.log(images_URLs)
+readImagesFile();
+console.log(images_URLs);
 
 module.exports = {
     readImagesFile: readImagesFile,

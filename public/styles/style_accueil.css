@@ -1,3 +1,154 @@
+/*Design Header*/
+
+.header {
+	background:rgb(250, 250, 250);
+	display: flex;
+	flex-direction: row;
+	border-bottom: solid 5px rgb(197, 184, 184);
+}
+
+.header_nav {
+	width: 90%;
+	margin: 0 auto;
+}
+	
+.header .header_nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+	
+.header_title {
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+	
+.header_title h2 {
+	color: black;
+	font-family: 'Asap', sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 26px;
+	text-decoration: none;
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+	
+.header_usermenu {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+	height: 100%;
+	align-items: center;
+}
+
+#header_usermenu_list {
+	display: flex;
+	margin: 0px;
+}
+	
+.header_usermenu_item {
+	display: flex;
+	height: 80px;
+	justify-content: center;
+	align-items: center;
+}
+	
+.header_usermenu_item_link {
+	text-decoration: none;
+	color: black;
+	font-weight: 300;
+	font-size: 20px;
+	display: flex;
+	transition: .25s ease;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 0 30px;
+}
+	
+.header_usermenu_item_link:hover {
+	background: rgb(240, 240, 240);
+}
+	
+.header_usermenu_icon {
+	color: rgb(250, 250, 250);
+	font-size: 20px;
+	margin-right: 10px;
+}
+	
+.header_usermenu_responsive-icon {
+	height: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 26px;
+	color: #fff;
+	display: none;
+	flex-grow: 1;
+}
+	
+.header_usermenu_responsive-icon i {
+	height: 80%;
+	width: 70px;
+	text-align: center;
+	line-height: 80px;
+	cursor: pointer;
+	margin-right: 35px;
+}
+   
+/* Fin Design Header */
+
+
+/* Burger menu */
+
+.burger_menu {
+	cursor: pointer;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/768px-Ic_menu_48px.svg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Fin Burger menu */   
+
+
+/* Design Bannière */
+    
+body.loaded { 
+    opacity: 1; 
+    transition: 1s opacity; 
+} 
+
+  .banner { 
+    position: relative;  
+	height: 40rem; 
+	width: 100%; 
+    overflow: hidden; 
+} 
+
+    .banner .background_banner { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    z-index: -1; 
+    transform:  scale(1.1); 
+    background:  url(https://media-cdn.tripadvisor.com/media/photo-m/1280/13/d0/68/40/les-deux-tours.jpg) no-repeat;  
+    background-size: cover; 
+    background-position: 20% 10%; 
+} 
+
+  /* une fois la page chargé */ 
+    .loaded .banner .background_banner { 
+    transform: scale(1.2); 
+    transition: 9s transform; 
+} 
+
+/* Fin Design Bannière */
+
 /* Code CSS pied de page */
 
 footer {
@@ -7,7 +158,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     background:rgb(250, 250, 250);
-    border-bottom: solid 8px rgb(197, 184, 184);
+
 
     padding: 5px;
     
@@ -139,9 +290,16 @@ footer {
 
 /* CSS acceuil */
 
+main {
+    border-bottom: solid 5px rgb(197, 184, 184);
+}
+
+body {
+    margin: 0px;
+}
+
 .content_accueil {
     height: 100%;
-
     display: flex;
     flex-direction: row;
     justify-self: center;
@@ -465,6 +623,7 @@ footer {
     main {
         width: 100%;
         height: 50%;
+        border-bottom: solid 5px rgb(197, 184, 184);
     }
 
 }
@@ -484,3 +643,75 @@ footer {
 }
 
 /* Fin partie responsive du code CSS */
+
+/*Adaptation du design sur petits écrans*/
+@media (max-width: 780px) {
+
+	/*Header*/
+	
+	.header_nav {
+		width: 95%;
+	}
+
+	.header_usermenu {
+		display:none;
+	}
+	
+	.header_usermenu_responsive-icon {
+		display:flex;
+	}
+
+	.header_usermenu_item_link {
+		border-bottom: solid 2px white;
+	}
+	  
+	  .header_usermenu.clicked {
+		display: flex;
+		position: absolute;
+		flex-direction: column;
+		height: 300px;
+		width: 100%;
+		background: rgb(241, 241, 241);
+		align-self: self-start;
+		justify-content: space-around;
+		margin: 0 -2.5%;
+		margin-top: 90px;
+		z-index: 2;
+	}
+	  
+	  .header_usermenu.clicked .header_usermenu_item,
+	  .header_usermenu.clicked .header_usermenu_item a {
+		width: 100%;
+	}
+
+	.header_usermenu_item {
+		background: rgb(240, 240, 240);
+	}
+
+	  .header_usermenu_item_link:hover {
+		background:rgb(255, 255, 255);
+	}
+ 
+	.main-menu-responsive-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.main-menu-responsive-icon i {
+		height: 40px;
+		width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		color: #666;
+		flex-grow: 1;
+	}
+
+	/*Banner*/
+
+	.banner {
+		height: 20rem;
+	}
+}

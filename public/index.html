@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Deux Tours</title>
-    <link href="styles/style_chambres.css" rel="stylesheet" type="text/css" />
     <link href="styles/style_accueil.css" rel="stylesheet" type="text/css" />
-    <script src="scripts/scripts.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
-
     <!-- Haut de page -->
     <header class="header">
         <nav class="header_nav">
@@ -26,21 +22,23 @@
             </div>
 
             <div class="header_usermenu">
-                <li class="header_usermenu_item">
-                    <a href="index.html" class="header_usermenu_item_link">Accueil</a>
-                </li>
+                <ul id="header_usermenu_list">
+                    <li class="header_usermenu_item">
+                        <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+                    </li>
 
-                <li class="header_usermenu_item">
-                    <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
-                </li>
+                    <li class="header_usermenu_item">
+                        <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+                    </li>
 
-                <li class="header_usermenu_item">
-                    <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
-                </li>
+                    <li class="header_usermenu_item">
+                        <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+                    </li>
 
-                <li class="header_usermenu_item">
-                    <a href="#" class="header_usermenu_item_link">A propos</a>
-                </li>
+                    <li class="header_usermenu_item">
+                        <a href="#" class="header_usermenu_item_link">A propos</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -53,7 +51,7 @@
     </div>
     <!-- Fin bannière image  -->
     <main>
-        <div class="">
+        <div id="main">
             <section class="content_accueil">
                 <div class="div_accueil">
                     <p class="p_accueil_description">Venez découvrir les DeuxTours situées dans le Gard entre Cévennes
@@ -151,27 +149,32 @@
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/devanture_1.jpg"
-                                        onclick="currentSlide(1)" alt="Devanture">                                      <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(1)" alt="Devanture">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/jardin_devanture.jpg"
-                                        onclick="currentSlide(2)" alt="Jardin de la devanture">                         <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(2)" alt="Jardin de la devanture">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/marre_jardin.jpg"
-                                        onclick="currentSlide(3)" alt="Marre du jardin">                                <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(3)" alt="Marre du jardin">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/porte.jpg"
-                                        onclick="currentSlide(4)" alt="Porte d'entrée">                                 <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(4)" alt="Porte d'entrée">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/terrasse.jpg"
-                                        onclick="currentSlide(5)" alt="Terrasse">                                       <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(5)" alt="Terrasse">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                             </div>
                         </div>
@@ -182,27 +185,32 @@
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/piscine.jpg"
-                                        onclick="currentSlide(6)" alt="Piscine">                                        <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(6)" alt="Piscine">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/spa.jpg"
-                                        onclick="currentSlide(7)" alt="Spa">                                            <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(7)" alt="Spa">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/jardin.png"
-                                        onclick="currentSlide(8)" alt="Jardin">                                         <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(8)" alt="Jardin">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/deco_couloir.png"
-                                        onclick="currentSlide(9)" alt="Décoration du couloir intérieur">                <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(9)" alt="Décoration du couloir intérieur">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                                 <!-- Placer chaque mignature en colonne sur la ligne -->
                                 <div class="column">
                                     <img class="demo cursor" src="Images/page_acceuil/galerie/devanture_nuit.jpg"
-                                        onclick="currentSlide(10)" alt="Devanture de nuit">                             <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                        onclick="currentSlide(10)" alt="Devanture de nuit">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
                                 </div>
                             </div>
                         </div>
@@ -229,6 +237,7 @@
                     </div>
                 </div>
             </section>
+        </div>
     </main>
 
     <!-- Pied de Page -->
