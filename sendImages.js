@@ -29,8 +29,8 @@ function displayImages(json_file) {
                 for (var key_4 = 0, l4 = Object.values(Object.values(obj_3)[0]).length; key_4 < l4; key_4++) {
                     var obj_4 = Object.values(Object.values(obj_3)[0])[key_4];
                     images_URLs.push(obj_4);
+                    console.log(obj_4)
                 }
-
             }
         }
     }

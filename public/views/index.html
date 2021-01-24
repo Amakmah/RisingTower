@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Deux Tours</title>
+    <link href="../styles/style_accueil.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Haut de page -->
+    <header class="header">
+        <nav class="header_nav">
+            <div class="header_title">
+                <h2 class="header_title_h2">Les Deux Tours </h2>
+            </div>
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div class="header_usermenu">
+                <div id="header_usermenu_topbar"></div>
+                <div class="header_usermenu_card">
+                    <ul id="header_usermenu_list">
+                        <li class="header_usermenu_item">
+                            <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+                        </li>
+                        <li class="header_usermenu_item">
+                            <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+                        </li>
+                        <li class="header_usermenu_item">
+                            <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fin haut de page -->
+
+
+    <!-- Bannière image  -->
+    <div class="banner">
+        <img src="../Images/footer_et_banniere/banniere.jpg" alt="Bannière du site web, façade des Deux Tours"
+            class="background_banner">
+    </div>
+    <!-- Fin bannière image  -->
+    <main>
+        <div id="main">
+            <section class="content_accueil">
+                <div class="div_accueil">
+                    <p class="p_accueil_description">Venez découvrir les DeuxTours situées dans le Gard entre Cévennes
+                        et Camargue, à deux pas de villes anciennes telles qu’Uzès, Nîmes, Anduze, Lussan. Aurélie et
+                        Vincent vous accueillent dans leur demeure du XVIIIème siècle. L’architecture des lieux allie
+                        charme et authenticité, avec ses balustres et sculptures en pierre. Passionnés d’histoire et
+                        d’architecture, nous pourrons vous faire découvrir la taille de pierre réalisée sur place par
+                        votre hôte. </p>
+                    <button class="button_accueil_chambres" type="button" value="Continuer"
+                        onClick="javascript:document.location.href='chambres.html'">Nos chambres</button>
+                </div>
+
+                <!-- Insertion d'une vidéo -->
+                <div class="div_video">
+                    <iframe id="main_video" src="https://www.youtube.com/embed/CJn3PTWBWuU"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- Fin insertion d'une vidéo -->
+            </section>
+            <!-- Partie Galerie d'images -->
+            <section class="content_galerie">
+                <div class="div_galerie">
+                    <!-- Placer toutes les images en grand (puis les cacher en CSS l-260, et les afficher en fonction des événements en JS) -->
+                    <div class="galerie_slides">
+                        <div class="numbertext">1 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/devanture_1.jpg"
+                            alt="Devanture">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">2 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/jardin_devanture.jpg"
+                            alt="Jardin de la devanture">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">3 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/marre_jardin.jpg"
+                            alt="Marre du jardin">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">4 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/porte.jpg"
+                            alt="Porte d'entrée">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">5 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/terrasse.jpg"
+                            alt="Terrasse">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">6 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/piscine.jpg"
+                            alt="Piscine">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">7 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/spa.jpg" alt="Spa">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">8 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/jardin.png"
+                            alt="Jardin">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">9 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/deco_couloir.png"
+                            alt="Décoration du couloir intérieur">
+                    </div>
+
+                    <div class="galerie_slides">
+                        <div class="numbertext">10 / 10</div>
+                        <img class="galerie_displayed_images" src="../Images/page_acceuil/galerie/devanture_nuit.jpg"
+                            alt="Devanture de nuit">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <div class="galerie_thumbnails">
+                        <!-- div de la première ligne des mignatures de la galerie -->
+                        <div class=galerie_first_line>
+                            <!-- Placer le premier groupe de mignatures en ligne -->
+                            <div class="row">
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/devanture_1.jpg"
+                                        onclick="currentSlide(1)" alt="Devanture">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/jardin_devanture.jpg"
+                                        onclick="currentSlide(2)" alt="Jardin de la devanture">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/marre_jardin.jpg"
+                                        onclick="currentSlide(3)" alt="Marre du jardin">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/porte.jpg"
+                                        onclick="currentSlide(4)" alt="Porte d'entrée">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/terrasse.jpg"
+                                        onclick="currentSlide(5)" alt="Terrasse">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- div de la seconde ligne des mignatures de la galerie -->
+                        <div class="galerie_second_line">
+                            <!-- Placer le premier groupe de mignatures en ligne -->
+                            <div class="row">
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" id="column_bottom_left"
+                                        src="../Images/page_acceuil/galerie/piscine.jpg" onclick="currentSlide(6)"
+                                        alt="Piscine">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/spa.jpg"
+                                        onclick="currentSlide(7)" alt="Spa">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/jardin.png"
+                                        onclick="currentSlide(8)" alt="Jardin">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" src="../Images/page_acceuil/galerie/deco_couloir.png"
+                                        onclick="currentSlide(9)" alt="Décoration du couloir intérieur">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                                <!-- Placer chaque mignature en colonne sur la ligne -->
+                                <div class="column">
+                                    <img class="demo cursor" id="column_bottom_right"
+                                        src="../Images/page_acceuil/galerie/devanture_nuit.jpg"
+                                        onclick="currentSlide(10)" alt="Devanture de nuit">
+                                    <!-- onlick: appelle la fonction currentslide et définit l'index correspondant à l'image -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content_activites">
+                <div class="div_activites">
+                    <div class="wrapper_activites">
+                        <div class="activites_boxes">
+                            <img class="activites_images" id="La_Bambouseraie"
+                                src="../Images/page_acceuil/activites/La_Bambouseraie_1.jpg" alt="La Bambouseraie">
+                            <button class="activites_buttons">La Bambouseraie</button>
+
+                            <!-- The Modal -->
+                            <div id="activites_modal_bambouseraie" class="activites_modals">
+
+                                <!-- Contenu Modal -->
+                                <div class="activites_modal_card">
+
+                                    <div class="activites_modal_card_name">
+                                        <span class="activites_close">&times;</span>
+                                        <h2 class="activites_modal_card_name_text">La Bambouseraie d'Anduze</h2>
+                                    </div>
+                                    <div class="activites_modal_banners">
+                                        <img class="activites_card_images" id="card_Bambouseraie"
+                                            src="../Images/page_acceuil/activites/La_Bambouseraie_2.jpg"
+                                            alt="La Bambouseraie">
+                                    </div>
+                                    <div class="activites_modal_card_description">
+                                        <div class="activites_modal_description_left">
+                                            <div class="activites_modal_description_top_text">
+                                                <h2 class="activites_modal_description_text_h2">Description:</h2>
+                                                <p class="activites_modal_description_text">La Bambouseraie en Cévennes
+                                                    est un jardin exotique situé à Générargues dans le Gard. Unique en
+                                                    Europe par ses dimensions,
+                                                    la Bambouseraie en Cévennes se situe dans un domaine d'une
+                                                    superficie de 34 hectares à 11 km au sud-ouest d’Alès et à 2 km au
+                                                    nord d’Anduze.
+                                                </p>
+                                            </div>
+                                            <div class="activites_modal_description_bottom_text">
+                                                <h2 class="activites_modal_description_text_h2">Location:</h2>
+                                                <p class="activites_modal_description_text">La Bambouseraie se situe à
+                                                    26 km au Nord-Ouest de Brignon, à 30min en voiture.</p>
+                                            </div>
+                                        </div>
+                                        <div class="activites_modal_description_right">
+                                            <div class="activites_modal_description_maps"
+                                                id="activites_modal_description_map_1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activites_boxes">
+                            <img class="activites_images" id="Le_Duche"
+                                src="../Images/page_acceuil/activites/Duche_Uzes_1.jpg" alt="Le Duché d'Uzes">
+                            <button class="activites_buttons">Le Duché d'Uzès</button>
+
+                            <!-- The Modal -->
+                            <div id="activites_modal_duche" class="activites_modals">
+                                <!-- Modal content -->
+                                <div class="activites_modal_card">
+
+                                    <div class="activites_modal_card_name">
+                                        <span class="activites_close">&times;</span>
+                                        <h2 class="activites_modal_card_name_text">Le Duché d'Uzès</h2>
+                                    </div>
+                                    <div class="activites_modal_banners">
+                                        <img class="activites_card_images" id="card_Duche"
+                                            src="../Images/page_acceuil/activites/Duche_Uzes_2.jpg"
+                                            alt="Le Duché d'Uzes">
+                                    </div>
+                                    <div class="activites_modal_card_description">
+                                        <div class="activites_modal_description_left">
+                                            <div class="activites_modal_description_top_text">
+                                                <h2 class="activites_modal_description_text_h2">Description:</h2>
+                                                <p class="activites_modal_description_text">Le Château Ducal appelé le
+                                                    "Duché" est par son architecture un résumé de l'histoire de France.
+                                                    Le Moyen-Age, la Renaissance,
+                                                    le Siècle des Lumières et les Temps Modernes s'y retrouvent. Cette
+                                                    composition architecturale offre malgré cela une belle harmonie au
+                                                    regard.
+                                                    Le Duché est un des rares exemples de châteaux de famille faisant
+                                                    l'objet d'une restauration complète en ce début du 21ème siècle.
+                                                </p>
+                                            </div>
+                                            <div class="activites_modal_description_bottom_text">
+                                                <h2 class="activites_modal_description_text_h2">Location:</h2>
+                                                <p class="activites_modal_description_text">Le Duché d'Uzès se situe à
+                                                    20km à l'Est de Brignon, à 25 min en voiture.</p>
+                                            </div>
+                                        </div>
+                                        <div class="activites_modal_description_right">
+                                            <div class="activites_modal_description_maps"
+                                                id="activites_modal_description_map_2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activites_boxes">
+                            <img class="activites_images" id="Pont_du_Gard"
+                                src="../Images/page_acceuil/activites/Pont_du_Gard_1.jpg" alt="Le Pont du gard">
+                            <button class="activites_buttons">Le Pont du Gard</button>
+
+                            <!-- The Modal -->
+                            <div id="activites_modal_pdg" class="activites_modals">
+
+                                <!-- Modal content -->
+                                <div class="activites_modal_card">
+
+                                    <div class="activites_modal_card_name">
+                                        <span class="activites_close">&times;</span>
+                                        <h2 class="activites_modal_card_name_text">Le Pont du Gard</h2>
+                                    </div>
+                                    <div class="activites_modal_banners">
+                                        <img class="activites_card_images" id="card_Pont_du_Gard"
+                                            src="../Images/page_acceuil/activites/Pont_du_Gard_2.jpg"
+                                            alt="Le Pont du gard">
+                                    </div>
+                                    <div class="activites_modal_card_description">
+                                        <div class="activites_modal_description_left">
+                                            <div class="activites_modal_description_top_text"
+                                                id="activites_modal_description_text_pdg">
+                                                <h2 class="activites_modal_description_text_h2">Description:</h2>
+                                                <p class="activites_modal_description_text">Le Pont du Gard est un
+                                                    pont-aqueduc construit par les Romains au 1er siècle de notre ère.
+                                                    Il est exceptionnel par ses dimensions puisque
+                                                    avec ses 49 mètres de hauteur, c’est le pont-aqueduc romain le plus
+                                                    haut du monde. Il est composé de 3 rangées d’arches superposées
+                                                    (6 arches au premier niveau, 11 arches au second niveau et 47
+                                                    arceaux à l'origine), ce qui constitue également une réalisation
+                                                    rarissime
+                                                    pour l’époque. Il est enfin remarquable du fait de son excellent
+                                                    état de conservation qui lui valent aujourd'hui d’être admiré comme
+                                                    un chef d’œuvre du génie créateur humain. Il est le seul exemple de
+                                                    pont antique à 3 étages encore debout aujourd'hui.
+                                                </p>
+                                            </div>
+                                            <div class="activites_modal_description_bottom_text">
+                                                <h2 class="activites_modal_description_text_h2">Location:</h2>
+                                                <p class="activites_modal_description_text">Le Pont du Gard se situe à
+                                                    32km à L'Est de Brignon, à 35 min en voiture.</p>
+                                            </div>
+                                        </div>
+                                        <div class="activites_modal_description_right">
+                                            <div class="activites_modal_description_maps"
+                                                id="activites_modal_description_map_3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activites_boxes">
+                            <img class="activites_images" id="Arenes"
+                                src="../Images/page_acceuil/activites/Arenes_de_Nimes_1.jpg" alt="Les Arènes de Nîmes">
+                            <button class="activites_buttons">Les Arènes de Nîmes</button>
+
+                            <!-- The Modal -->
+                            <div id="activites_modal_arenes" class="activites_modals">
+
+                                <!-- Modal content -->
+
+                                <div class="activites_modal_card">
+
+                                    <div class="activites_modal_card_name">
+                                        <span class="activites_close">&times;</span>
+                                        <h2 class="activites_modal_card_name_text">Les Arènes de Nîmes</h2>
+                                    </div>
+                                    <div class="activites_modal_banners">
+                                        <img class="activites_card_images" id="card_Arenes"
+                                            src="../Images/page_acceuil/activites/Arenes_de_Nimes_1.jpg"
+                                            alt="Les Arènes de Nîmes">
+                                    </div>
+                                    <div class="activites_modal_card_description">
+                                        <div class="activites_modal_description_left">
+                                            <div class="activites_modal_description_top_text">
+                                                <h2 class="activites_modal_description_text_h2">Description:</h2>
+                                                <p class="activites_modal_description_text">Les Arènes de Nîmes
+                                                    illustrent parfaitement le degré de perfectionnement atteint par les
+                                                    ingénieurs romains pour la conception et la
+                                                    construction de ce type d'édifice très complexe. On connaît des
+                                                    amphithéâtres romains plus grands, mais c’est le mieux conservé de
+                                                    tous.
+                                                    En plus de la visite de l'amphithéâtre, vous pourrez découvrir
+                                                    durant votre visite le "Quartier des gladiateurs" ainsi que les
+                                                    "Couleurs
+                                                    des corridas", 2 expositions qui émerveilleront petits et grands!
+                                                </p>
+                                            </div>
+                                            <div class="activites_modal_description_bottom_text">
+                                                <h2 class="activites_modal_description_text_h2">Location:</h2>
+                                                <p class="activites_modal_description_text">Les Arènes de Nîmes se situe
+                                                    à 22km au Sud-Est de Brignon, à 25 min en voiture.</p>
+                                            </div>
+                                        </div>
+                                        <div class="activites_modal_description_right">
+                                            <div class="activites_modal_description_maps"
+                                                id="activites_modal_description_map_4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pied de Page -->
+    <footer class="nav-footer">
+        <div class="footer-container">
+            <div class="footer-container-phone">
+                <!-- Logo cliquable -->
+                <div class="footer_title">
+                    <h2 class="footer_title_h2">Les Deux </h2>
+                    <h2 class="footer_title_h2" id="footer_title_h2_2">Tours</h2>
+                </div>
+
+
+                <div class="footer-map">
+                    <!-- Insertion de la carte dans le footer -->
+                    <div id="footer-map-body"></div>
+                </div>
+                <!-- Contact Commanditaire -->
+                <div class="footer-contact-container">
+                    <p>Informations de contact: </p>
+                    <button id="footer-captcha">Afficher</button>
+                    <img id="footer-contact" src="../Images/footer_et_banniere/informations_contact.png"
+                        alt="Nos informations de contact">
+                </div>
+            </div>
+            <div class="footer-map-phone">
+                <!-- Insertion de la carte dans le footer -->
+                <div id="footer-map-body-phone"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/scripts_accueil.js"></script>
+</body>
+
+</html>

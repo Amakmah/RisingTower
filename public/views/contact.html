@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nous contacter</title>
+  <link href="../styles/style_contact.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+  <!-- Haut de page -->
+  <header class="header">
+    <nav class="header_nav">
+      <div class="header_title">
+        <h2 class="header_title_h2">Les Deux Tours </h2>
+      </div>
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+      </label>
+      <div class="header_usermenu">
+        <div id="header_usermenu_topbar"></div>
+        <div class="header_usermenu_card">
+          <ul id="header_usermenu_list">
+            <li class="header_usermenu_item">
+              <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+            </li>
+            <li class="header_usermenu_item">
+              <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+            </li>
+            <li class="header_usermenu_item">
+              <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Fin haut de page -->
+
+
+  <!-- Bannière image  -->
+  <div class="banner">
+    <img src="../Images/footer_et_banniere/banniere.jpg" alt="Bannière du site web, façade des Deux Tours"
+      class="background_banner">
+  </div>
+  <!-- Fin bannière image  -->
+  <main>
+    <!-- Petit titre pour le site -->
+    <h1 id="p0">Vous avez une demande particulière ?</h1>
+    <hr>
+    <!-- Formulaire de contact -->
+    <div class="container">
+      <p id="titleform">Formulaire</p>
+      <form id="contact-form" action="/email">
+
+        <input placeholder="Entrez votre Prénom" id="prenom" name="prenom" type="text" class="form-control"
+          pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required />
+        <input placeholder="Entrez votre Nom" id="nom" name="nom" type="text" class="form-control"
+          pattern="[A-Za-z áàâäéèêëçíìîïñóòôöõøúùûü -]*" required />
+        <input placeholder="Entrez votre adresse mail" id="email" type="email" name="email" class="form-control"
+          aria-describedby="emailHelp" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+        <input placeholder="Entrez votre numéro de téléphone" id="phone" name="phone" type="text" class="form-control"
+          pattern="(0|\+33)[1-9]( *[0-9]{2}){4}" required />
+        <select id="objet" name="objet" type="text" class="form-control" required>
+          <option value="">Entrez l'objet de votre demande<a /option>
+          <option value="réservation">Réservation</option>
+          <option value="demande d'informations">Demande d'informations</option>
+          <option value="demande d'emploi">Demande d'emploi</option>
+          <option value="autre demande">Autre demande</option>
+        </select>
+        <textarea placeholder="Message" id="message" name="message" class="form-control" rows="3" required></textarea>
+        <button id="bouton" type="submit" value="submit" class="btn btn-primary">
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </main>
+  <!-- Pied de Page -->
+  <footer class="nav-footer">
+    <div class="footer-container">
+      <div class="footer-container-phone">
+        <!-- Logo cliquable -->
+        <div class="footer_title">
+          <h2 class="footer_title_h2">Les Deux </h2>
+          <h2 class="footer_title_h2" id="footer_title_h2_2">Tours</h2>
+        </div>
+
+
+        <div class="footer-map">
+          <!-- Insertion de la carte dans le footer -->
+          <div id="footer-map-body"></div>
+        </div>
+        <!-- Contact Commanditaire -->
+        <div class="footer-contact-container">
+          <p>Informations de contact: </p>
+          <button id="footer-captcha">Afficher</button>
+          <img id="footer-contact" src="../Images/footer_et_banniere/informations_contact.png"
+            alt="Nos informations de contact">
+        </div>
+      </div>
+      <div class="footer-map-phone">
+        <!-- Insertion de la carte dans le footer -->
+        <div id="footer-map-body-phone"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/scripts_contact.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $('form').on('submit', (e) => {
+      e.preventDefault();
+
+      const prenom = $('#prenom').val().trim();
+      const nom = $('#nom').val().trim();
+      const email = $('#email').val().trim();
+      const phone = $('#phone').val().trim();
+      const objet = $('#objet').val().trim();
+      const message = $('#message').val().trim();
+
+      const data = {
+        prenom,
+        nom,
+        email,
+        objet,
+        phone,
+        message
+      };
+
+      $.post('/email', data, function () {
+        console.log('Server received our data');
+        EnvoiMail();
+      });
+    });
+  </script>
+</body>
+
+</html>
