@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos chambres</title>
+    <link href="../styles/style_chambres.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Haut de page -->
+    <header class="header">
+        <nav class="header_nav">
+            <div class="header_title">
+                <h2 class="header_title_h2">Les Deux Tours </h2>
+            </div>
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div class="header_usermenu">
+                <div id="header_usermenu_topbar"></div>
+                <div class="header_usermenu_card">
+                    <ul id="header_usermenu_list">
+                        <li class="header_usermenu_item">
+                            <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+                        </li>
+                        <li class="header_usermenu_item">
+                            <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+                        </li>
+                        <li class="header_usermenu_item">
+                            <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fin haut de page -->
+
+
+    <!-- Bannière image  -->
+    <div class="banner">
+        <img src="../Images/footer_et_banniere/banniere.jpg" alt="Bannière du site web, façade des Deux Tours"
+            class="background_banner">
+    </div>
+    <!-- Fin bannière image  -->
+
+    <!-- Cards chambres -->
+    <main>
+        <section class="container_cards">
+            <div class="main_chambres">
+                <!-- Card première chambre -->
+                <article>
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/59592294.jpg?k=2ac0cb33864a0bc9dea9d9ffdc29e9d64a27d38ff3305693f0e5f73de3723d93&o="
+                        alt="Sample photo">
+                    <div class="text_card">
+                        <h2>Joséphine</h2>
+                        <h3>La chaleureuse</h3>
+                        <button class="bouton_card" id="bouton_card_Joséphine" onclick="showDialogOneCard()">Voir la
+                            description</button>
+                    </div>
+                </article>
+                <!-- Fin card première chambre -->
+
+                <!-- Card seconde chambre -->
+                <article>
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/227935231.jpg?k=7ff870710ecefdccf69cbf392ea5bd488516fc3f665920ebf0f780568ae4fd15&o=);"
+                        alt="Sample photo">
+                    <div class="text_card">
+                        <h2>Hortense</h2>
+                        <h3>La lumineuse</h3>
+                        <button class="bouton_card" id="bouton_card_Hortense" onclick="showDialogTwoCard()">Voir la
+                            description</button>
+                    </div>
+                </article>
+                <!-- Fin card seconde chambre -->
+
+                <!-- Card troisième chambre -->
+                <article>
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/174791537.jpg?k=cc8581ad3df512360449c4f057abcf28d5825f0f1f5e27c9348513d13328cca6&o="
+                        alt="Sample photo">
+                    <div class="text_card">
+                        <h2>Héloise </h2>
+                        <h3> La charmante</h3>
+                        <button class="bouton_card" id="bouton_card_Héloise" onclick="showDialogThreeCard()">Voir la
+                            description</button>
+                    </div>
+                </article>
+                <!-- Fin card troisième chambre -->
+            </div>
+        </section>
+        <!-- Fin des cards -->
+
+        <!-- Modal de la première chambre -->
+        <dialog id="first_dialog_modal">
+            <div class="modal_description">
+                <div class="modal_card">
+                    <div class="modal_card_name">
+                        <button class="button_close_modal" id="button_close_1" onclick="closeDialogOneCard()"><img class="img_close_modal"
+                                src="http://cdn.onlinewebfonts.com/svg/img_391885.png" width="20px" height="20px"
+                                alt=""></button>
+                        <h2 id="h2_Josephine">Chambre Joséphine</h2>
+                    </div>
+                    <div class="modal_card_description">
+                        <section class="modal_card_content">
+                            <h3>Caractéristiques</h3>
+                            <div class="characteristics text">
+                                <p class="text">Elle se situe côté piscine et jardin,
+                                    avec une ambiance douce et chaleureuse avec un ancien potager du XVIIIème siècle et
+                                    ses
+                                    carreaux avec cabochons.<br /><br />
+                                    La chambre dispose d’un coin salle de bain ouvert sur la chambre avec une douche
+                                    hydro
+                                    ainsi que des toilettes privées.<br />
+                                    Un plateau de courtoisie est à disposition.
+                                </p>
+                            </div>
+
+                            <h3>Informations pratiques</h3>
+                            <div>
+                                <ul>
+                                    <li class="li_infos">Un coin salle à manger et salon est disponible, avec
+                                        réfrigérateur.
+                                    </li>
+                                    <li class="li_infos">Les petits déjeuners sont servis de 8h à 9h30 sur la terrasse
+                                        ou
+                                        dans la salle à manger</li>
+                                    <li class="li_infos">Les arrivées se font à partir de 16h jusqu’à 19h00 et les
+                                        départs,
+                                        avant 10h30.</li>
+                                </ul>
+                            </div>
+
+                            <article class="modal_article_content">
+                                <h3 class="article-content_h3">Tarifs</h3>
+                                <div class="characteristics text" id="tarif_responsive_ajustement">
+                                    <h4>85€/Nuit</h4>
+                                    <p>à partir de deux nuits, une réduction de 10%.</p>
+                                </div>
+                            </article>
+                        </section>
+                        <div class="modal_card_image">
+                            <img class="image_Joséphine" src="../Images/Chambres/Josephine_1.jpg" alt="">
+                            <img class="image_Joséphine" src="../Images/Chambres/Josephine_2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- Fin modal de la première chambre -->
+
+        <!-- modal de la seconde chambre -->
+        <dialog id="second_dialog_modal">
+            <div class="modal_description">
+                <div class="modal_card">
+                    <div class="modal_card_name">
+                        <button class="button_close_modal" id="button_close_2" onclick="closeDialogTwoCard()"><img class="img_close_modal"
+                                src="http://cdn.onlinewebfonts.com/svg/img_391885.png" width="20px" height="20px"
+                                alt=""></button>
+                        <h2 id="h2_Hortense">Chambre Hortense</h2>
+                    </div>
+
+                    <div class="modal_card_description">
+                        <section class="modal_card_content">
+                            <h3>Caractéristiques</h3>
+                            <div class="characteristics text">
+                                <p class="text"> Spacieuse et lumineuse décorée de tons bleus et gris, elle se situe
+                                    côté
+                                    jardin et parking.<br>
+                                    La chambre est équipée d’une salle de bain dans la tour avec douche à l’italienne et
+                                    toilettes privées. <br>
+                                    Il y a aussi possibilité d’un lit d’appoint pour accueillir un enfant.<br>
+                                    Un plateau de courtoisie est à disposition.
+                                </p>
+                            </div>
+                            <h3>Informations pratiques</h3>
+                            <div>
+                                <ul>
+                                    <li class="li_infos">Un coin salle à manger et salon est disponible, avec
+                                        réfrigérateur.
+                                    </li>
+                                    <li class="li_infos">Les petits déjeuners sont servis de 8h à 9h30 sur la terrasse
+                                        ou
+                                        dans la salle à manger</li>
+                                    <li class="li_infos">Les arrivées se font à partir de 16h jusqu’à 19h00 et les
+                                        départs,
+                                        avant 10h30.</li>
+                                </ul>
+                            </div>
+
+                            <article class="modal_article_content">
+                                <h3 class="article-content_h3">Tarifs</h3>
+                                <div class="characteristics text">
+                                    <h4>80€/Nuit</h4>
+                                    <p>à partir de deux nuits, une réduction de 10%.</p>
+                                </div>
+                            </article>
+                        </section>
+
+                        <div class="modal_card_image">
+                            <img class="image_Joséphine" src="../Images/Chambres/Hortense_1.jpg" alt="">
+                            <img class="image_Joséphine" src="../Images/Chambres/Hortense_2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- Fin modal de la seconde chambre -->
+
+        <!-- modal de la seconde chambre -->
+        <dialog id="third_dialog_modal">
+            <div class="modal_description">
+                <div class="modal_card">
+                    <div class="modal_card_name">
+                        <button class="button_close_modal" id="button_close_3" onclick="closeDialogThreeCard()"><img class="img_close_modal"
+                                src="http://cdn.onlinewebfonts.com/svg/img_391885.png" width="20px" height="20px"
+                                alt=""></button>
+                        <h2 id="h2_Heloise">Chambre Héloise</h2>
+                    </div>
+
+                    <div class="modal_card_description">
+                        <section class="modal_card_content">
+                            <h3>Caractéristiques</h3>
+                            <div class="characteristics text">
+                                <p class="text">Elle se situe côté piscine et jardin, et rappelle le charme du passé
+                                    avec
+                                    ses enduits à la chaux.<br> Une cheminée en marbre et ses tomettes, avec sa salle de
+                                    bain avec douche à l’italienne dans la tour et toilettes privées.<br>
+                                    Un plateau de courtoisie est à disposition.
+                                </p>
+                            </div>
+
+                            <h3>Informations pratiques</h3>
+                            <div>
+                                <ul>
+                                    <li class="li_infos">Un coin salle à manger et salon est disponible, avec
+                                        réfrigérateur.
+                                    </li>
+                                    <li class="li_infos">Les petits déjeuners sont servis de 8h à 9h30 sur la terrasse
+                                        ou
+                                        dans la salle à manger</li>
+                                    <li class="li_infos">Les arrivées se font à partir de 16h jusqu’à 19h00 et les
+                                        départs,
+                                        avant 10h30.</li>
+                                </ul>
+                            </div>
+
+                            <article class="modal_article_content">
+                                <h3 class="article-content_h3">Tarifs</h3>
+                                <div class="characteristics text">
+                                    <h4>85€/Nuit</h4>
+                                    <p>à partir de deux nuits, une réduction de 10%.</p>
+                                </div>
+                            </article>
+                        </section>
+
+                        <div class="modal_card_image">
+                            <img class="image_Joséphine" src="../Images/Chambres/Heloise_1.jpg" alt="">
+                            <img class="image_Joséphine" src="../Images/Chambres/Heloise_2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </main>
+    <!-- Fin modal de la troisième chambre -->
+
+
+    <!-- Pied de Page -->
+    <footer class="nav-footer">
+        <div class="footer-container">
+            <div class="footer-container-phone">
+                <!-- Logo cliquable -->
+                <div class="footer_title">
+                    <h2 class="footer_title_h2">Les Deux </h2>
+                    <h2 class="footer_title_h2" id="footer_title_h2_2">Tours</h2>
+                </div>
+
+
+                <div class="footer-map">
+                    <!-- Insertion de la carte dans le footer -->
+                    <div id="footer-map-body"></div>
+                </div>
+                <!-- Contact Commanditaire -->
+                <div class="footer-contact-container">
+                    <p>Informations de contact: </p>
+                    <button id="footer-captcha">Afficher</button>
+                    <img id="footer-contact" src="../Images/footer_et_banniere/informations_contact.png"
+                        alt="Nos informations de contact">
+                </div>
+            </div>
+            <div class="footer-map-phone">
+                <!-- Insertion de la carte dans le footer -->
+                <div id="footer-map-body-phone"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/scripts_chambres.js"></script>
+    <script>
+        // Ouvrir et fermer la modal de la première chambre 
+        var modal = document.getElementById("first_dialog_modal");
+        function showDialogOneCard() {
+            modal.show();
+        }
+
+        function closeDialogOneCard() {
+            modal.close();
+        }
+
+        // Ouvrir et fermer la modal de la seconde chambre
+        var modal2 = document.getElementById("second_dialog_modal");
+
+        function showDialogTwoCard() {
+            modal2.show();
+        }
+
+        function closeDialogTwoCard() {
+            modal2.close();
+        }
+
+        // Ouvrir et fermer la modal de la troisième chambre
+        var modal3 = document.getElementById("third_dialog_modal");
+
+        function showDialogThreeCard() {
+            modal3.show();
+        }
+
+        function closeDialogThreeCard() {
+            modal3.close();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Deux Tours</title>
+    <link href="../styles/style_page_404.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Haut de page -->
+    <header class="header">
+        <nav class="header_nav">
+            <div class="header_title">
+                <h2 class="header_title_h2">Les Deux Tours </h2>
+            </div>
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div class="header_usermenu">
+                <div id="header_usermenu_topbar"></div>
+                <div class="header_usermenu_card">
+                    <ul id="header_usermenu_list">
+                        <li class="header_usermenu_item">
+                            <a href="index.html" class="header_usermenu_item_link">Accueil</a>
+                        </li>
+                        <li class="header_usermenu_item">
+                            <a href="chambres.html" class="header_usermenu_item_link">Nos chambres</a>
+                        </li>
+                        <li class="header_usermenu_item">
+                            <a href="contact.html" class="header_usermenu_item_link">Nous contacter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fin haut de page -->
+    <main>
+        <div class="main_container">
+            <div class="texts-container">
+                <h1 id="h1_404" class="texts_404">Oups! On dirait bien que la page que vous cherchez n'existe pas!</h1>
+                <h3 id="h3_404" class="texts_404">Vous trouverez toutes les pages disponibles en haut, dans le menu de
+                    navigation.</h3>
+            </div>
+        </div>
+    </main>
+    <!-- Pied de Page -->
+    <footer class="nav-footer">
+        <div class="footer-container">
+            <div class="footer-container-phone">
+                <!-- Logo cliquable -->
+                <div class="footer_title">
+                    <h2 class="footer_title_h2">Les Deux </h2>
+                    <h2 class="footer_title_h2" id="footer_title_h2_2">Tours</h2>
+                </div>
+
+
+                <div class="footer-map">
+                    <!-- Insertion de la carte dans le footer -->
+                    <div id="footer-map-body"></div>
+                </div>
+                <!-- Contact Commanditaire -->
+                <div class="footer-contact-container">
+                    <p>Informations de contact: </p>
+                    <button id="footer-captcha">Afficher</button>
+                    <img id="footer-contact" src="../Images/footer_et_banniere/informations_contact.png"
+                        alt="Nos informations de contact">
+                </div>
+            </div>
+            <div class="footer-map-phone">
+                <!-- Insertion de la carte dans le footer -->
+                <div id="footer-map-body-phone"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/scripts_404.js"></script>
+</body>
+
+</html>
