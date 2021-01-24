@@ -18,13 +18,19 @@
                 },
                 {
                     "activites": {
-                        "image_activite_1": "hiking.jpg"
+                        "image_activite_1": "La_Bambouseraie_1.jpg",
+                        "image_activite_2": "La_Bambouseraie_2.jpg",
+                        "image_activite_3": "Duche_Uzes_1.jpg",
+                        "image_activite_4": "Duche_Uzes_2.jpg",
+                        "image_activite_5": "Pont_du_Gard_1.jpg",
+                        "image_activite_6": "Pont_du_Gard_2.jpg",
+                        "image_activite_7": "Arenes_de_Nimes_1.jpg"
                     }
                 },
                 {
-                    "footer": {
-                        "image_footer_1": "logo_mail.png",
-                        "image_footer_2": "logo_appel.png"
+                    "footer_et_banniere": {
+                        "image_footer": "informations_contact.png",
+                        "image_banniere": "banniere.jpg"
                     }
                 }
             ]
