@@ -6,15 +6,15 @@
 /*Design Header*/
 
 .header {
-    background: rgb(250, 250, 250);
+    background: rgba(250, 250, 250, 0); /* change to 0 for invisible*/
     display: flex;
     flex-direction: row;
     border-bottom: solid 0.5vh rgb(197, 184, 184);
 }
 
 .header_nav {
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin-left: 37vh;
 }
 
 .header .header_nav {
@@ -28,6 +28,7 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     flex: 1;
     z-index: 99;
 }
@@ -36,7 +37,18 @@
     font-family: Lohengrin;
     font-weight: 400;
     font-style: italic;
-    font-size: 6vh;
+    font-size: 8vh;
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: darkblue;
+    margin: 0vh;
+}
+.header_title_h3 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 4vh;
     text-decoration: none;
     display: flex;
     height: 100%;
@@ -48,7 +60,6 @@
 .header_usermenu {
     display: flex;
     justify-content: flex-end;
-    flex-grow: 1;
     height: 100%;
     align-items: center;
 }
@@ -67,15 +78,16 @@
 
 .header_usermenu_item_link {
     text-decoration: none;
-    color: black;
+    color: darkblue;
     font-weight: 300;
-    font-size: 2vh;
+    font-size: 4vh;
     display: flex;
     transition: .25s ease;
     height: 100%;
     align-items: center;
     justify-content: center;
     padding: 0 3vh;
+    z-index: 1;
 }
 
 .header_usermenu_item_link:hover {
@@ -108,7 +120,6 @@
 }
 
 /* Fin Design Header */
-
 
 /* Menu Burger */
 input[type=checkbox] {
@@ -329,6 +340,7 @@ body.loaded {
 .banner {
     position: relative;
     width: 100%;
+    top: -15.2vh;   /* change to top: -15.2vh for invisible*/
     overflow: hidden;
 }
 
@@ -449,17 +461,36 @@ hr {
 /* Adapatation du design sur écran inférieur à 1206 px */
 
 @media (max-width: 2560px) {
+    .header_nav {
+        width: 95%;
+        margin-left: 37vh;
+    }
+    .header_title_h3 {
+        margin-left: 2vh;
+    }
     .p_accueil_description {
         font-size: 1.5em;
     }
 }
 @media (max-width: 1880px) {
+    .header_nav {
+        margin-left: 39vh;
+    }
     .p_accueil_description {
         font-size: 1em;
     }
 }
 
 @media (max-width: 1440px) {
+    .header_nav {
+        margin-left: 27vh;
+    }
+    .header_title {
+        flex: 2;
+    }
+    .header_title_h3 {
+        margin-left: 6vh;
+    }
     /*  Partie Galerie */
     .div_galerie {
         width: 70%;
@@ -480,8 +511,24 @@ hr {
 
 @media (max-width: 1024px) {
     /*  Header  */
+    .header {
+        background: rgba(250, 250, 250, 1); /* change to 0 for invisible*/
+    }
+    .header_nav {
+        width: 100%;
+        margin-left: 0vh;
+    }
+    .header_title_h2 {
+        font-size: 6vh;
+    }
+    .header_title_h3 {
+        margin-left: 2vh;
+    }
     .header_usermenu {
         flex-grow: 0; 
+    }
+    .header_usermenu_item_link {
+        font-size: 3vh;
     }
     /*  */
 
@@ -493,6 +540,9 @@ hr {
         margin-left: 3vh;
     }
     /*  */
+    .banner {
+        top: 0;
+    }
 
     /*  Partie Accueil  */
     .content_accueil {
@@ -545,9 +595,22 @@ hr {
     /*  Header  */
     .header_title {
         position: fixed;
+        flex-direction: column;
         top: 0;
-        width: 45%;
+        width: 100%;
         height: 7%;
+    }
+    .header_title_h3 {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 3vh;
+        text-decoration: none;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        color: darkblue;
+        margin: 0vh;
+        margin-left: 2vh;
     }
     .header_usermenu {
         width: 100%;
@@ -555,7 +618,7 @@ hr {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: -36.35vh;
+        top: -33.35vh;
         right: 0;
         border-bottom: solid 0.5vh rgb(197, 184, 184);
         background: white;
@@ -703,6 +766,7 @@ hr {
     /*  Banner  */
     .banner {
         margin-top: 7vh;
+        top: 3.8vh;
     }
     /*  */
 
@@ -741,7 +805,7 @@ hr {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: -36.35vh;
+        top: -33.35vh;
         right: 0;
         border-bottom: solid 0.5vh rgb(197, 184, 184);
         background: white;
@@ -820,6 +884,9 @@ hr {
         border-radius: 0.52em;
         box-sizing: border-box;
         transition: all 0.2s;
+    }
+    .header_usermenu_item_link {
+        font-size: 2vh;
     }
     #header_usermenu_list li a:hover {
         color:#fff;
@@ -1047,6 +1114,15 @@ hr {
     .header_title_h2 {
         font-size: 4.5vh;
     }
+    .header_title_h3 {
+        font-size: 2vh;
+    }
+    .header_usermenu {
+        top: -35.35vh;
+    }
+    .header_usermenu_item_link {
+        font-size: 1.6vh;
+    }
     .footer_title_h2 {
         font-size: 3.5vh;
     }
@@ -1060,5 +1136,9 @@ hr {
         width: 113%;
     }
     /*  */
+    .banner {
+        margin-top: 7vh;
+        top: 1.8vh;
+    }
 }
 /* Fin partie responsive du code CSS */
